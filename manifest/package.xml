@@ -35,6 +35,12 @@
     <!-- Custom import statements start here. -->
     <types>
         <members>*</members>
+        <members>Account</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>Account</members>
+        <members>Contact</members>
         <name>CustomObject</name>
     </types>
     <version>47.0</version>
