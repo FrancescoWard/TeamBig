@@ -35,7 +35,6 @@
     <!-- Custom import statements start here. -->
     <types>
         <members>*</members>
-        <members>Account</members>
         <name>CustomObject</name>
     </types>
     <types>
