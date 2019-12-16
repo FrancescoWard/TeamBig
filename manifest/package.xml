@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>Appointment__c</members>
+        <members>AppointmentContact__c</members>
+        <members>Residence__c</members>
+        <members>Contact</members>
+        <members>Account</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>Account</members>
+        <members>Contact</members>
+        <name>AssignmentRules</name>
+    </types>
+    <types>
+        <members>Org</members>
+        <members>Sharing</members>
+        <members>Security</members>
+        <name>Settings</name>
+    </types>
+    <!--<types>
+        <members>*</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>ApexComponent</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>ApexPage</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>ApexTestSuite</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>ApexTrigger</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>AuraDefinitionBundle</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>LightningComponentBundle</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>StaticResource</name>
+    </types>
+    <types>
+	    <members>MyProfile</members>
+	    <name>Profile</name>
+	</types>
+    <types>
+        <members>Customer</members>
+        <members>Doctor</members>
+        <name>CustomSite</name>
+    </types>
+    <types>
+        <members>Doctor</members>
+        <members>Customer</members>
+        <name>Network</name>
+    </types>
+    <types>
+        <members>Doctor_C</members>
+        <members>Customer1</members>
+        <name>SiteDotCom</name>
+    </types>
+    <types>
+        <members>medicaldoctor</members>
+        <name>ContentAsset</name>
+    </types>
+    <types>
+        <members>For_Export</members>
+        <name>PermissionSet</name>
+    </types>
+    <types>
+        <members>Appointment__c-Appointment Layout</members>
+        <members>Office_Location__c-Office Location Layout</members>
+        <members>Doctor__c-Doctor Layout</members>
+        <members>Customer__c-Customer Layout</members>
+        <members>Residence__c-Residence Layout</members>
+        <members>Account-Account Layout</members>
+        <name>Layout</name>
+    </types>
+    <types>
+        <members>Doctor__c.Enable_Doctor_Community_User</members>
+        <name>QuickAction</name>
+    </types>-->
+    <version>47.0</version>
+</Package>
