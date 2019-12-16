@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
-    <types>
+    <!--<types>
         <members>Appointment__c</members>
         <members>AppointmentContact__c</members>
         <members>Residence__c</members>
@@ -18,8 +18,8 @@
         <members>Sharing</members>
         <members>Security</members>
         <name>Settings</name>
-    </types>
-    <!--<types>
+    </types>-->
+    <types>
         <members>*</members>
         <name>ApexClass</name>
     </types>
@@ -52,10 +52,14 @@
         <name>StaticResource</name>
     </types>
     <types>
-	    <members>MyProfile</members>
+	    <members>*</members>
 	    <name>Profile</name>
 	</types>
     <types>
+        <members>*</members>
+        <name>CustomObject</name>
+    </types>
+<!--    <types>
         <members>Customer</members>
         <members>Doctor</members>
         <name>CustomSite</name>
