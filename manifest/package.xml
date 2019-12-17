@@ -46,12 +46,26 @@
         <members>Org</members>
         <members>Sharing</members>
         <members>Security</members>
+        <members>Communities</members>
         <name>Settings</name>
     </types>
     <types>
         <members>Contact.Doctor</members>
         <members>Contact.Customer</members>
         <name>RecordType</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>Community</name>
+    </types>
+    <types>
+        <members>Partner Community Login User</members>
+        <members>Partner Community User</members>
+        <members>Customer Community Login User</members>
+        <members>Customer Community Plus Login User</members>
+        <members>Customer Community Plus User</members>
+        <members>Customer Community User</members>
+        <name>Profile</name>
     </types>
     <version>47.0</version>
 </Package>
