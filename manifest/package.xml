@@ -43,7 +43,7 @@
         <name>CustomObject</name>
     </types>
     <types>
-        <members>Org</member>
+        <members>Org</members>
         <members>Sharing</members>
         <members>Security</members>
         <name>Settings</name>
