@@ -43,6 +43,8 @@
         <name>CustomObject</name>
     </types>
     <types>
+        <members>Chatter</members>
+        <members>MyDomain</members>
         <members>Org</members>
         <members>Sharing</members>
         <members>Security</members>
