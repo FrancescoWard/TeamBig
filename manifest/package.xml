@@ -33,7 +33,7 @@
         <name>StaticResource</name>
     </types>
     <!-- Custom import statements start here. -->
-    <types>
+    <types>                             <!-- 12/16: Schema and record types -->
         <members>*</members>
         <name>CustomObject</name>
     </types>
@@ -56,7 +56,7 @@
         <members>Contact.Customer</members>
         <name>RecordType</name>
     </types>
-    <types>
+    <types>                             <!-- 12/17: Communities enabled and profiles shared -->
         <members>*</members>
         <name>Community</name>
     </types>
@@ -68,6 +68,18 @@
         <members>Customer Community Plus User</members>
         <members>Customer Community User</members>
         <name>Profile</name>
+    </types>
+    <types>                             <!-- 12/18: One community made -->
+        <members>*</members>
+        <name>SiteDotCom</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>CustomSite</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>Network</name>
     </types>
     <version>47.0</version>
 </Package>
