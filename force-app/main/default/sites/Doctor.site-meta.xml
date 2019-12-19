@@ -18,7 +18,7 @@
     <genericErrorPage>Exception</genericErrorPage>
     <inMaintenancePage>InMaintenance</inMaintenancePage>
     <indexPage>CommunitiesLanding</indexPage>
-    <masterLabel>Customer</masterLabel>
+    <masterLabel>Doctor</masterLabel>
     <referrerPolicyOriginWhenCrossOrigin>true</referrerPolicyOriginWhenCrossOrigin>
     <requireHttps>true</requireHttps>
     <requireInsecurePortalAccess>false</requireInsecurePortalAccess>
@@ -26,5 +26,5 @@
     <siteAdmin>brady.achterberg@brave-moose-ayz3cf.com</siteAdmin>
     <siteType>ChatterNetwork</siteType>
     <subdomain>southern-heart-teambig-developer-edition</subdomain>
-    <urlPathPrefix>customer</urlPathPrefix>
+    <urlPathPrefix>doctor</urlPathPrefix>
 </CustomSite>

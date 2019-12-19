@@ -71,11 +71,14 @@
     </types>
     <types>                             <!-- 12/18: One community made -->
         <members>Customer1</members>
+        <members>Doctor1</members>
         <name>SiteDotCom</name>
     </types>
     <types>
         <members>Customer</members>
-        <name>CustomSite</name>
+        <members>Doctor</members>
+        <name>CustomSite</name>         <!-- To import, set siteAdmin tag to your own username,
+                                             e.g brady.achterberg@brave-moose-ayz3cf.com       -->
     </types>
     <types>
         <members>*</members>
