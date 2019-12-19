@@ -23,10 +23,7 @@
     <requireHttps>true</requireHttps>
     <requireInsecurePortalAccess>false</requireInsecurePortalAccess>
     <selfRegPage>CommunitiesSelfReg</selfRegPage>
-    <siteAdmin>
-        <!-- Put your username here -->
-        brady.achterberg@brave-moose-ayz3cf.com
-    </siteAdmin>
+    <siteAdmin>brady.achterberg@brave-moose-ayz3cf.com</siteAdmin>
     <siteType>ChatterNetwork</siteType>
     <subdomain>southern-heart-teambig-developer-edition</subdomain>
     <urlPathPrefix>customer</urlPathPrefix>
