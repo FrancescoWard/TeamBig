@@ -1,0 +1,4 @@
+<aura:component>
+    <aura:attribute name="appID" type="ID" />
+    <force:recordView recordId="{! v.appID }" type="FULL" />
+</aura:component>	

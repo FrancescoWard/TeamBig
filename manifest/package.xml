@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>*</members>
+        <members>LAC_CustomerController</members>
+        <members>TestLAC_CustomerController</members>
         <name>ApexClass</name>
     </types>
     <types>
@@ -21,7 +22,13 @@
         <name>ApexTrigger</name>
     </types>
     <types>
-        <members>*</members>
+        <members>AppRecordPage</members>
+        <members>AppSingle</members>
+        <members>BookApp</members>
+        <members>CustomerBookAppApp</members>
+        <members>CustomerTitleCard</members>
+        <members>CustomerViewApps</members>
+        <members>DoctorSearch</members>
         <name>AuraDefinitionBundle</name>
     </types>
     <types>
