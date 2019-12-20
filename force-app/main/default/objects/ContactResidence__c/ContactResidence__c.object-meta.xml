@@ -143,25 +143,24 @@
     <allowInChatterGroups>false</allowInChatterGroups>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <deploymentStatus>Deployed</deploymentStatus>
-    <description>Place where Doctor can hold Appointments</description>
     <enableActivities>false</enableActivities>
     <enableBulkApi>true</enableBulkApi>
     <enableFeeds>false</enableFeeds>
-    <enableHistory>true</enableHistory>
+    <enableHistory>false</enableHistory>
     <enableLicensing>false</enableLicensing>
     <enableReports>true</enableReports>
     <enableSearch>true</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
-    <externalSharingModel>Private</externalSharingModel>
-    <label>Residence</label>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <label>ContactResidence</label>
     <nameField>
-        <label>Residence Name</label>
-        <trackHistory>false</trackHistory>
-        <type>Text</type>
+        <displayFormat>ContactResidence-{0000}</displayFormat>
+        <label>ContactResidence Name</label>
+        <type>AutoNumber</type>
     </nameField>
-    <pluralLabel>Residence</pluralLabel>
+    <pluralLabel>ContactResidences</pluralLabel>
     <searchLayouts/>
-    <sharingModel>ReadWrite</sharingModel>
+    <sharingModel>ControlledByParent</sharingModel>
     <visibility>Public</visibility>
 </CustomObject>
