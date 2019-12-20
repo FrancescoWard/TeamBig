@@ -155,9 +155,8 @@
     <externalSharingModel>ReadWrite</externalSharingModel>
     <label>Appointment</label>
     <nameField>
-        <displayFormat>Appointment-{0000}</displayFormat>
         <label>Appointment Name</label>
-        <type>AutoNumber</type>
+        <type>Text</type>
     </nameField>
     <pluralLabel>Appointments</pluralLabel>
     <searchLayouts/>

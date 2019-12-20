@@ -2,6 +2,7 @@
 <RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Customer</fullName>
     <active>true</active>
+    <description>This is the custom record type for the Customer profile.  It hides custom Doctor picklists.</description>
     <label>Customer</label>
     <picklistValues>
         <picklist>Gender__c</picklist>
@@ -15,33 +16,6 @@
         </values>
         <values>
             <fullName>Other</fullName>
-            <default>false</default>
-        </values>
-    </picklistValues>
-    <picklistValues>
-        <picklist>Languages__c</picklist>
-        <values>
-            <fullName>Chinese</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>English</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>French</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>German</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Italian</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Spanish</fullName>
             <default>false</default>
         </values>
     </picklistValues>
