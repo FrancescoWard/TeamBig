@@ -4,6 +4,7 @@
     <active>true</active>
     <description>This is the custom record type for the Customer profile.  It hides custom Doctor picklists.</description>
     <label>Customer</label>
+       
     <picklistValues>
         <picklist>Gender__c</picklist>
         <values>
@@ -19,6 +20,7 @@
             <default>false</default>
         </values>
     </picklistValues>
+    <!--
     <picklistValues>
         <picklist>Languages__c</picklist>
         <values>
@@ -42,6 +44,7 @@
             <default>false</default>
         </values>
     </picklistValues>
+
     <picklistValues>
         <picklist>LeadSource</picklist>
         <values>
@@ -138,4 +141,5 @@
             <default>false</default>
         </values>
     </picklistValues>
+    -->
 </RecordType>

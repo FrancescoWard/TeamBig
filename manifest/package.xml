@@ -54,11 +54,13 @@
         <members>Communities</members>
         <name>Settings</name>
     </types>
+
     <types>
         <members>Contact.Doctor</members>
         <members>Contact.Customer</members> 
         <name>RecordType</name>    
     </types> 
+
     <types>                             <!-- 12/17: Communities enabled and profiles grabbed -->
         <members>*</members>
         <name>Community</name>

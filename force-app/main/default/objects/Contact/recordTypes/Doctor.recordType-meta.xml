@@ -4,6 +4,7 @@
     <active>true</active>
     <description>Record type showing all custom doctor fields.</description>
     <label>Doctor</label>
+  <!--  
     <picklistValues>
         <picklist>Gender__c</picklist>
         <values>
@@ -42,6 +43,7 @@
             <default>false</default>
         </values>
     </picklistValues>
+    
     <picklistValues>
         <picklist>LeadSource</picklist>
         <values>
@@ -138,4 +140,5 @@
             <default>false</default>
         </values>
     </picklistValues>
+    -->
 </RecordType>
