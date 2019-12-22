@@ -33,10 +33,13 @@
         <name>StaticResource</name>
     </types>
     <!-- Custom import statements start here. -->
-    <types>                             <!-- 12/16: Schema and record types -->
+<!-- 12/16: Schema and record types -->
+
+    <types>                             
         <members>*</members>
-        <name>CustomObject</name>
-    </types>
+       <name>CustomObject</name> 
+    </types> 
+
     <types>
         <members>Account</members>
         <members>Contact</members>
@@ -53,9 +56,9 @@
     </types>
     <types>
         <members>Contact.Doctor</members>
-        <members>Contact.Customer</members>
-        <name>RecordType</name>
-    </types>
+        <members>Contact.Customer</members> 
+        <name>RecordType</name>    
+    </types> 
     <types>                             <!-- 12/17: Communities enabled and profiles grabbed -->
         <members>*</members>
         <name>Community</name>
