@@ -20,7 +20,6 @@
             <default>false</default>
         </values>
     </picklistValues>
-    <!--
     <picklistValues>
         <picklist>Languages__c</picklist>
         <values>
@@ -31,18 +30,22 @@
             <fullName>French</fullName>
             <default>false</default>
         </values>
+        <!--
         <values>
             <fullName>German</fullName>
             <default>false</default>
         </values>
+        -->
         <values>
             <fullName>Italian</fullName>
             <default>false</default>
         </values>
+        <!--
         <values>
             <fullName>Spanish</fullName>
             <default>false</default>
         </values>
+        -->
     </picklistValues>
 
     <picklistValues>
@@ -141,5 +144,4 @@
             <default>false</default>
         </values>
     </picklistValues>
-    -->
 </RecordType>
