@@ -50,7 +50,7 @@ public class DataFactory {
         insert appList;
 
         //Appointment-contacts
-        conList = new List<Contact>([SELECT Id, Name FROM Contact]);
+        //conList = new List<Contact>([SELECT Id, Name FROM Contact]);
         
         for(Contact x : conList)
         {
