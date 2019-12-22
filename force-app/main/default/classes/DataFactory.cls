@@ -9,11 +9,7 @@ public class DataFactory {
 
         //Accounts 
         testAccts.add(new Account(Name='Helloworld'));
-        //testAccts.add(new Account(Name='Foobar'));
-        //testAccts.add(new Account(Name='Barbaz'));
-        insert testAccts;
-
-       //testAccts = new List<Account>([SELECT Id, Name FROM Account]);
+        
         String recTypeDoc = Schema.SObjectType.Contact.getRecordTypeInfosByName()
                   .get('Doctor').getRecordTypeId();
         String recTypeCust = Schema.SObjectType.Contact.getRecordTypeInfosByName()
@@ -38,34 +34,27 @@ public class DataFactory {
             obj.Gender__c = (0 == Math.mod( i , 2 ) ? 'Female': 'Male');
             conList.add(obj);
         }
-        insert conList;
+       
 
         //Appointments
         for(Integer j = 0; j < 10; j++)
         {
                 appList.add(new Appointment__c(Status__c = 'Pending',
-                                                Start_Time__c = DateTime.now().addDays(j)));
+                                               Start_Time__c = DateTime.now().addDays(j),
+                                               Customer_Contact__c = conList.get( 10 ).Id,
+                                               Doctor_Contact__c = conList.get( 0 ).Id));
+        }
+
+        try 
+        {
+            insert testAccts;
+            insert conList;
+            insert appList;
+            
+        } catch (DmlException dme) 
+        {
+            System.debug(dme.getMessage());
         }
         
-        insert appList;
-
-        //Appointment-contacts
-        //conList = new List<Contact>([SELECT Id, Name FROM Contact]);
-        
-        for(Contact x : conList)
-        {
-            AppointmentContact__c ac = new AppointmentContact__c();
-            ac.Appointment__c = appList.get( 0 ).Id;
-            ac.Contact__c = x.Id;
-            aconList.add(ac);
-        }
-        insert aconList;
-
-        for(Integer j = 0; j < 10; j++)
-        {
-                appList.add(new Appointment__c(Status__c = 'Pending',
-                                                Start_Time__c = DateTime.now().addDays(j)));
-        }
-
     }
 }
