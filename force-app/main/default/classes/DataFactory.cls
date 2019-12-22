@@ -9,11 +9,14 @@ public class DataFactory {
 
         //Accounts 
         testAccts.add(new Account(Name='Helloworld'));
+        insert testAccts;
         
         String recTypeDoc = Schema.SObjectType.Contact.getRecordTypeInfosByName()
                   .get('Doctor').getRecordTypeId();
         String recTypeCust = Schema.SObjectType.Contact.getRecordTypeInfosByName()
                   .get('Customer').getRecordTypeId();  
+
+        testAccts = new List<Account>([SELECT Id, Name FROM Account]);
         //Contacts
         for(Integer i = 0 ; i < 20; i++)
         {
@@ -21,7 +24,7 @@ public class DataFactory {
         
             if(i < 10)
             { 
-                obj.AccountId = testAccts.get( 0 ).id;
+                obj.AccountId = testAccts.get( 0 ).Id;
                 obj.LastName = 'Last'+i;
                 obj.recordTypeId = recTypeDoc;
             }
@@ -34,8 +37,10 @@ public class DataFactory {
             obj.Gender__c = (0 == Math.mod( i , 2 ) ? 'Female': 'Male');
             conList.add(obj);
         }
-       
+        insert conList;
 
+
+        conList = new List<Contact>([SELECT Id, Name FROM Contact]);
         //Appointments
         for(Integer j = 0; j < 10; j++)
         {
@@ -45,16 +50,7 @@ public class DataFactory {
                                                Doctor_Contact__c = conList.get( 0 ).Id));
         }
 
-        try 
-        {
-            insert testAccts;
-            insert conList;
-            insert appList;
+        insert appList;
             
-        } catch (DmlException dme) 
-        {
-            System.debug(dme.getMessage());
-        }
-        
     }
 }
