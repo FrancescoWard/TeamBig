@@ -78,7 +78,8 @@
         <members>Customer</members>
         <members>Doctor</members>
         <name>CustomSite</name>         <!-- To import, set siteAdmin tag to your own username,
-                                             e.g brady.achterberg@brave-moose-ayz3cf.com       -->
+                                             e.g brady.achterberg@brave-moose-ayz3cf.com,
+                                             brady.achterberg@playful-fox-98ib6e.com       -->
     </types>
     <types>
         <members>*</members>
