@@ -14,7 +14,7 @@
     </lookupFilter>
     <referenceTo>Contact</referenceTo>
     <relationshipLabel>Appointments (Customer Contact)</relationshipLabel>
-    <relationshipName>Appointments</relationshipName>
+    <relationshipName>CustomerAppointments</relationshipName>
     <relationshipOrder>0</relationshipOrder>
     <reparentableMasterDetail>false</reparentableMasterDetail>
     <trackTrending>false</trackTrending>

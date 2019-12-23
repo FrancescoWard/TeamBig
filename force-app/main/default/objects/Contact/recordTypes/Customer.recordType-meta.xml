@@ -20,29 +20,6 @@
         </values>
     </picklistValues>
     <picklistValues>
-        <picklist>Languages__c</picklist>
-        <values>
-            <fullName>English</fullName>
-            <default>true</default>
-        </values>
-        <values>
-            <fullName>French</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>German</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Italian</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Spanish</fullName>
-            <default>false</default>
-        </values>
-    </picklistValues>
-    <picklistValues>
         <picklist>LeadSource</picklist>
         <values>
             <fullName>Other</fullName>
