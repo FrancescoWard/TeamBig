@@ -33,9 +33,7 @@
         <name>StaticResource</name>
     </types>
     <!-- Custom import statements start here. -->
-<!-- 12/16: Schema and record types -->
-
-    <types>                             
+    <types>                             <!-- 12/16: Schema and record types -->
         <members>*</members>
        <name>CustomObject</name> 
     </types> 

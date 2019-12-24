@@ -292,6 +292,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Appointment__c.Residence__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Appointment__c.Status__c</field>
         <readable>false</readable>
     </fieldPermissions>

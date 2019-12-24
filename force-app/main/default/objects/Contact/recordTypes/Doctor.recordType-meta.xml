@@ -3,7 +3,7 @@
     <fullName>Doctor</fullName>
     <active>true</active>
     <description>Record type showing all custom doctor fields.</description>
-    <label>Doctor</label> 
+    <label>Doctor</label>
     <picklistValues>
         <picklist>Gender__c</picklist>
         <values>
@@ -19,34 +19,6 @@
             <default>false</default>
         </values>
     </picklistValues>
-    <picklistValues>
-        <picklist>Languages__c</picklist>
-        <values>
-            <fullName>English</fullName>
-            <default>true</default>
-        </values>
-        <values>
-            <fullName>French</fullName>
-            <default>false</default>
-        </values>
-        <!--
-        <values>
-            <fullName>German</fullName>
-            <default>false</default>
-        </values>
-        -->
-        <values>
-            <fullName>Italian</fullName>
-            <default>false</default>
-        </values>
-        <!-- 
-        <values>
-            <fullName>Spanish</fullName>
-            <default>false</default>
-        </values>
-        -->
-    </picklistValues>
-    
     <picklistValues>
         <picklist>LeadSource</picklist>
         <values>
