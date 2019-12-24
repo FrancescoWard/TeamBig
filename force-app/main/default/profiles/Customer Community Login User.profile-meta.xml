@@ -307,16 +307,12 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-<<<<<<< HEAD
-        <editable>true</editable>
-=======
         <editable>false</editable>
         <field>Appointment__c.Residence__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
->>>>>>> b8a0131e12dcd6e91574dcb82b026a3b29a138ab
         <field>Appointment__c.Status__c</field>
         <readable>true</readable>
     </fieldPermissions>
