@@ -3,12 +3,20 @@
     <fullName>Contact__c</fullName>
     <externalId>false</externalId>
     <label>Contact</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>Contact.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Doctor</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
     <referenceTo>Contact</referenceTo>
-    <relationshipLabel>AppointmentContacts</relationshipLabel>
-    <relationshipName>AppointmentContacts</relationshipName>
+    <relationshipLabel>ContactResidences</relationshipLabel>
+    <relationshipName>ContactResidences</relationshipName>
     <relationshipOrder>0</relationshipOrder>
     <reparentableMasterDetail>false</reparentableMasterDetail>
-    <trackHistory>false</trackHistory>
     <trackTrending>false</trackTrending>
     <type>MasterDetail</type>
     <writeRequiresMasterRead>false</writeRequiresMasterRead>
