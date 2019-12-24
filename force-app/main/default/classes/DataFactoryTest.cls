@@ -3,9 +3,9 @@ public class DataFactoryTest {
 	@isTest (seeAllData = true)
     public static void testWithAccount ()
     {
-            Test.startTest();
-            DataFactory.createData();
-            Test.stopTest();
+        Test.startTest();
+        DataFactory.createData();
+        Test.stopTest();
     }
     
     @isTest

@@ -14,9 +14,11 @@
         <isOptional>false</isOptional>
     </lookupFilter>
     <referenceTo>Contact</referenceTo>
+    <!--fw rename child relationship name to Appointments2-->
     <relationshipLabel>Appointments</relationshipLabel>
-    <relationshipName>Appointments</relationshipName>
+    <relationshipName>Appointments2</relationshipName>
     <required>false</required>
     <trackTrending>false</trackTrending>
     <type>Lookup</type>
+    
 </CustomField>
