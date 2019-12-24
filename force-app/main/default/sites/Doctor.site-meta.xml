@@ -23,8 +23,8 @@
     <requireHttps>true</requireHttps>
     <requireInsecurePortalAccess>false</requireInsecurePortalAccess>
     <selfRegPage>CommunitiesSelfReg</selfRegPage>
-    <siteAdmin>brady.achterberg@playful-fox-98ib6e.com</siteAdmin>
+    <siteAdmin>brady.achterberg@brave-moose-ayz3cf.com</siteAdmin>
     <siteType>ChatterNetwork</siteType>
-    <subdomain>southern-heart-teambig-developer-edition</subdomain>
+    <subdomain>southern-heart-testorg-developer-edition</subdomain>
     <urlPathPrefix>doctor</urlPathPrefix>
 </CustomSite>

@@ -4,14 +4,14 @@ public class DataFactoryTest {
     public static void testWithAccount ()
     {
         Test.startTest();
-        DataFactory.createData();
+        DataFactory.createData(10);
         Test.stopTest();
     }
     
     @isTest
     public static void testWithoutAccount ()
     {	Test.startTest();
-        DataFactory.createData();
+        DataFactory.createData(10);
         Test.stopTest();
     }
 }
