@@ -1,0 +1,9 @@
+<aura:component controller="LAC_CustomerController">
+    <aura:attribute name="doctors" type="Contact[]" />
+    <aura:attribute name="SpecialtyOptions" type="List" />
+
+    <lightning:combobox name="progress" label="Status" value="inProgress" placeholder="Select Progress" options="{! v.options }" onchange="{! c.handleChange }"/>
+    
+    <!-- iterating through List of Doctors-->
+
+</aura:component>
