@@ -1,17 +1,17 @@
 @isTest
 public class DataFactoryTest {
-	@isTest
-    public static void runTest()
+	@isTest (seeAllData = true)
+    public static void testWithAccount ()
     {
-        try
-        {
             Test.startTest();
             DataFactory.createData();
             Test.stopTest();
-        }
-        catch(Exception e)
-        {
-            
-        }
+    }
+    
+    @isTest
+    public static void testWithoutAccount ()
+    {	Test.startTest();
+        DataFactory.createData();
+        Test.stopTest();
     }
 }

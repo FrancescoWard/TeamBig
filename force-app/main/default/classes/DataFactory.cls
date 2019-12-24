@@ -10,19 +10,21 @@ public class DataFactory
         List<Appointment__c> appList = new List<Appointment__c>();
         List<Contact> conList = new List<Contact>();
         List<Residence__c> resList = new List<Residence__c>();
-        Account southernHeart = [ 	SELECT Id, Name 
-                                 	FROM Account 
-                                 	WHERE Name = 'Southern Heart' 
-                                 	LIMIT 1 
-                                ];
-
-        // Add Southern Heart account if it doesn't exist already
-        if ( southernHeart == null )
-        {	southernHeart = new Account(name = 'Southern Heart');
+        Account southernHeart;
+        try 
+        {	southernHeart = [ 	SELECT Id, Name 
+            	                FROM Account 
+                	            WHERE Name = 'Southern Heart' 
+                    	        LIMIT 1 
+                        	];
+        } catch ( QueryException qe )
+        {	// Add Southern Heart account if it doesn't exist already
+        	southernHeart = new Account(name = 'Southern Heart');
             southernHeart.IsPartner = true;
          	insert southernHeart;
         }
-
+/*
+*/
         // Create 20 contacts, 10 Doctors and 10 Customers
         for(Integer i = 0 ; i < 20 ; i++)
         {
