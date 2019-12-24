@@ -49,11 +49,7 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>DoctorApptController</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>FetchApptList</apexClass>
+        <apexClass>DoctorHomeController</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>

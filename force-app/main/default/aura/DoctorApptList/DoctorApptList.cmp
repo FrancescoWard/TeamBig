@@ -1,5 +1,5 @@
 <aura:component implements="forceCommunity:availableForAllPageTypes"
-                controller="DoctorApptController">
+                controller="DoctorHomeController">
     <!-- attributes -->
     <aura:attribute name="data" type="Object"/>
     <aura:attribute name="columns" type="List"/>

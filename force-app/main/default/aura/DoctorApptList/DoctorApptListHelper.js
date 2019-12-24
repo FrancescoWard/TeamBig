@@ -33,11 +33,15 @@
     },
     
 	loadAppts : function (component) 
-    {	let action = component.get( "c.getDoctorAppts" );
-     	action.setParams( { u : component.get("v.currentUser") } );
+    {	console.log("Loading appointments...");
+        let action = component.get( "c.getDoctorAppts" );
+     	// action.setParams( { u : $A.get("$SObjectType.CurrentUser.Id") } );
      	action.setCallback( this, function (response)
-        {	// action code here
-                               
+        {	console.log("Callback returned with state code" + response.getState() );
+            if ( response.getState() == "SUCCESS" )
+            {	console.log("Apex returned this: " + response.getReturnValue() );
+                component.set("v.data", response.getReturnValue() );
+            }
         }
                           );
      	$A.enqueueAction(action);
