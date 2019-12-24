@@ -41,6 +41,14 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>DataFactory</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>DataFactoryTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>ForgotPasswordController</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -278,6 +286,14 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Appointment__c.Contact__c</field>
+<<<<<<< HEAD
+=======
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Appointment__c.End_Time__c</field>
+>>>>>>> b8a0131e12dcd6e91574dcb82b026a3b29a138ab
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -291,7 +307,16 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+<<<<<<< HEAD
         <editable>true</editable>
+=======
+        <editable>false</editable>
+        <field>Appointment__c.Residence__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+>>>>>>> b8a0131e12dcd6e91574dcb82b026a3b29a138ab
         <field>Appointment__c.Status__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -368,6 +393,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Contact.Jigsaw</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Contact.Languages__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>

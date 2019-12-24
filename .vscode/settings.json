@@ -4,5 +4,9 @@
     "**/bower_components": true,
     "**/.sfdx": true
 },
+<<<<<<< HEAD
 "eslint.nodePath": "c:\\Users\\bdawk\\.vscode\\extensions\\salesforce.salesforcedx-vscode-lwc-47.10.0\\node_modules"
+=======
+"eslint.nodePath": "/Users/francesco/.vscode/extensions/salesforce.salesforcedx-vscode-lwc-47.10.0/node_modules"
+>>>>>>> b8a0131e12dcd6e91574dcb82b026a3b29a138ab
 }
