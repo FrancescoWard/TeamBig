@@ -25,4 +25,10 @@ public with sharing class LAC_CustomerController {
         // String confirmed = 'Confirmed';
         
     }
+
+    // getting List of default doctors based on the user ID logged in
+    @AuraEnabled
+    public static List<Appointment__c> getAppointments() {
+
+    } 
 }

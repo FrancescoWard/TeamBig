@@ -1,5 +1,5 @@
 <aura:application>
     <c:CustomerTitleCard />
     <c:DoctorSearch />
-    <c:BookApp />
+    <c:BookApp /> 
 </aura:application>

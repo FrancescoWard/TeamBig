@@ -1,9 +1,16 @@
 <aura:component controller="LAC_CustomerController">
-    <aura:attribute name="doctors" type="Contact[]" />
+    <aura:attribute name="Docs" type="Contact[]" />
     <aura:attribute name="SpecialtyOptions" type="List" />
+    <aura:handler name="init" value="{! this }" action="{! c.doInit }" />
 
     <lightning:combobox name="progress" label="Status" value="inProgress" placeholder="Select Progress" options="{! v.options }" onchange="{! c.handleChange }"/>
     
     <!-- iterating through List of Doctors-->
-
-</aura:component> 
+    <div class="slds-box">
+        <div class="slds-text-heading_large">Available Doctors</div>
+        <br/>
+        	<aura:iteration items="{!v.Docs}" var="doc"> 
+                <c:AppSingle docID="{! doc.Id }" />    
+            </aura:iteration>
+    </div>
+</aura:component>
