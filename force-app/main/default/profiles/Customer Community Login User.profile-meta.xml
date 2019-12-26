@@ -286,14 +286,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Appointment__c.Contact__c</field>
-<<<<<<< HEAD
-=======
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
         <field>Appointment__c.End_Time__c</field>
->>>>>>> b8a0131e12dcd6e91574dcb82b026a3b29a138ab
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>

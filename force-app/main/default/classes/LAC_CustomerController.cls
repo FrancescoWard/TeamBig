@@ -27,8 +27,41 @@ public with sharing class LAC_CustomerController {
     }
 
     // getting List of default doctors based on the user ID logged in
-    @AuraEnabled
-    public static List<Appointment__c> getAppointments() {
+    //@AuraEnabled
+    //public static List<Contact> getAvailableDoctors() {
 
-    } 
+        /*
+        List<String> pickListValuesList= new List<String>();
+		Schema.DescribeFieldResult fieldResult = ObjectApiName.FieldApiName.getDescribe();
+		List<Schema.PicklistEntry> ple = fieldResult.getPicklistValues();
+		for( Schema.PicklistEntry pickListVal : ple){
+			pickListValuesList.add(pickListVal.getLabel());
+		}     
+		return pickListValuesList;
+        */
+
+
+    //} 
+
+    @AuraEnabled
+    public static List<String> getAvailableDoctorSpecialtyOptions() {
+        List<String> pickListValuesList= new List<String>();
+		Schema.DescribeFieldResult fieldResult = Contact.Speciality__c.getDescribe();
+		List<Schema.PicklistEntry> spec = fieldResult.getPicklistValues();
+		for( Schema.PicklistEntry pickListVal : spec){
+			pickListValuesList.add(pickListVal.getValue());
+		}     
+		return pickListValuesList;
+    }
+
+     @AuraEnabled
+    public static List<String> getAvailableDoctorGenderOptions() {
+        List<String> pickListValuesList= new List<String>();
+		Schema.DescribeFieldResult fieldResult = Contact.Gender__c.getDescribe();
+		List<Schema.PicklistEntry> gend = fieldResult.getPicklistValues();
+		for( Schema.PicklistEntry pickListVal : gend){
+			pickListValuesList.add(pickListVal.getValue());
+		}     
+		return pickListValuesList;
+    }
 }

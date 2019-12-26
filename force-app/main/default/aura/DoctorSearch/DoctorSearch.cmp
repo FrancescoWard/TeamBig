@@ -1,16 +1,45 @@
 <aura:component controller="LAC_CustomerController">
     <aura:attribute name="Docs" type="Contact[]" />
-    <aura:attribute name="SpecialtyOptions" type="List" />
-    <aura:handler name="init" value="{! this }" action="{! c.doInit }" />
 
-    <lightning:combobox name="progress" label="Status" value="inProgress" placeholder="Select Progress" options="{! v.options }" onchange="{! c.handleChange }"/>
-    
-    <!-- iterating through List of Doctors-->
-    <div class="slds-box">
-        <div class="slds-text-heading_large">Available Doctors</div>
-        <br/>
-        	<aura:iteration items="{!v.Docs}" var="doc"> 
-                <c:AppSingle docID="{! doc.Id }" />    
-            </aura:iteration>
+<!-- Specialty-->
+    <aura:attribute name="specOptions" type="List" />
+    <aura:attribute name="selectedValue" type="String" />
+    <aura:handler name="init" value="{!this}" action="{!c.init}" />
+<!--
+    <lightning:select name="specialtyId" label="Select a specialty:" aura:id="specialtyId" value="{!v.selectedValue}">
+        <aura:iteration items="{!v.specOptions}" var="option">
+            <option text="{!option}" value="{!option}" selected="{!option.selected}"/>
+        </aura:iteration>
+    </lightning:select>
+-->
+    <div class="slds-grid">
+       
+        <div class="slds-col slds-size_1-of-3">
+            
+            <lightning:select name="specialtyId" label="Select a specialty:" aura:id="specialtyId" value="{!specialty}">
+                <aura:iteration items="{!v.specOptions}" var="specOpts">
+                    <option text="{!specOpts}" value="{!specOpts}" selected="{!specOpts.selected}"/>
+                </aura:iteration>
+            </lightning:select>
+        </div>
+        <div class="slds-col slds-size_1-of-3">
+            <lightning:select name="genderId" label="Select a gender:" aura:id="genderId" value="{!gender}">
+                <aura:iteration items="{!v.gendOptions}" var="gendOpts">
+                    <option text="{!gendOpts}" value="{!gendOpts}" selected="{!gendOpts.selected}"/>
+                </aura:iteration>
+            </lightning:select>
+        </div>
+        <!--
+        <div class="slds-col slds-size_1-of-3">
+            <lightning:select name="specialtyId" label="Select a specialty:" aura:id="specialtyId" value="{!v.selectedValue}">
+                <aura:iteration items="{!v.specOptions}" var="option">
+                    <option text="{!option}" value="{!option}" selected="{!option.selected}"/>
+                </aura:iteration>
+            </lightning:select>
+        </div>
+        -->
     </div>
+
+
+
 </aura:component>
