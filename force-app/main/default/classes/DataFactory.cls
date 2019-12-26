@@ -54,7 +54,7 @@ public class DataFactory
             obj.Gender__c = (0 == Math.mod( i , 2 ) ? 'Female': 'Male');
             drList.add(obj);
         } 
-        insert custList; insert drList;
+        upsert custList; upsert drList;
         
         // Add each doctor to the Reston residence using junction object
         for( Contact dr : drList )
@@ -78,7 +78,20 @@ public class DataFactory
         }
         insert appList;
     }
-    
+    // Create many appointments between the same two contacts
+/*    public static void CreateAppts (Contact dr, Contact cust, Integer n)
+    {	List<Appointment__c> applist = new List<Appointment__c>();
+     	for ( Integer i = 0 ; i < 1 ; i++ )
+        {	applist.add( new Appointment__c	(   Status__c = 'Pending',
+                                                Start_Time__c = DateTime.now().addDays(i),
+                                                Customer_Contact__c = cust.Id,
+                                                Doctor_Contact__c = dr.Id
+                                          	)
+                        );
+        }
+     	insert applist;
+    }
+  */  
     public static void DestroyData ()
     {
         List<Contact> dummyContacts = [ SELECT Id, LastName
