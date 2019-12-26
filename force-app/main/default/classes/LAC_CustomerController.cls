@@ -26,23 +26,17 @@ public with sharing class LAC_CustomerController {
         
     }
 
-    // getting List of default doctors based on the user ID logged in
-    //@AuraEnabled
-    //public static List<Contact> getAvailableDoctors() {
+    // getting List of doctors based on the gender, languages, and specialty
+    @AuraEnabled
+    public static List<Contact> getDoctors(String specialty, String gender, String language) {
+        List<Contact> docList = new List<Contact>();
+        Final String recTypeDoc = Schema.SObjectType.Contact.getRecordTypeInfosByName()
+                                        .get('Doctor').getRecordTypeId();
+        docList = database.query('Select Id, Name, Speciality__c, Gender__c, Languages__c From Contact Where RecordTypeId=:recTypeDoc AND Speciality__c=:specialty AND Gender__c=:gender AND Languages__c includes :language');
+		return docList;
+    } 
 
-        /*
-        List<String> pickListValuesList= new List<String>();
-		Schema.DescribeFieldResult fieldResult = ObjectApiName.FieldApiName.getDescribe();
-		List<Schema.PicklistEntry> ple = fieldResult.getPicklistValues();
-		for( Schema.PicklistEntry pickListVal : ple){
-			pickListValuesList.add(pickListVal.getLabel());
-		}     
-		return pickListValuesList;
-        */
-
-
-    //} 
-
+    // Returning a list of Strings filled with the picklist values of Specialty__c
     @AuraEnabled
     public static List<String> getAvailableDoctorSpecialtyOptions() {
         List<String> pickListValuesList= new List<String>();
@@ -54,7 +48,8 @@ public with sharing class LAC_CustomerController {
 		return pickListValuesList;
     }
 
-     @AuraEnabled
+    // Returning a list of Strings filled with the picklist values of Gender__c
+    @AuraEnabled
     public static List<String> getAvailableDoctorGenderOptions() {
         List<String> pickListValuesList= new List<String>();
 		Schema.DescribeFieldResult fieldResult = Contact.Gender__c.getDescribe();
@@ -62,6 +57,18 @@ public with sharing class LAC_CustomerController {
 		for( Schema.PicklistEntry pickListVal : gend){
 			pickListValuesList.add(pickListVal.getValue());
 		}     
+		return pickListValuesList;
+    }
+
+    // Returning a list of Strings filled with the picklist values of Languages__c
+    @AuraEnabled
+    public static List<String> getAvailableDoctorLanguageOptions() {
+        List<String> pickListValuesList= new List<String>();
+		Schema.DescribeFieldResult fieldResult = Contact.Languages__c.getDescribe();
+		List<Schema.PicklistEntry> lang = fieldResult.getPicklistValues();
+		for( Schema.PicklistEntry pickListVal : lang){
+			pickListValuesList.add(pickListVal.getValue());
+		}
 		return pickListValuesList;
     }
 }

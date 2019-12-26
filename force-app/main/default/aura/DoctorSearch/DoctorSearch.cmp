@@ -1,45 +1,55 @@
 <aura:component controller="LAC_CustomerController">
-    <aura:attribute name="Docs" type="Contact[]" />
-
-<!-- Specialty-->
+    <!-- Define attributes and handle events-->
     <aura:attribute name="specOptions" type="List" />
-    <aura:attribute name="selectedValue" type="String" />
+    <aura:attribute name="genderOptions" type="List" />
+    <aura:attribute name="langOptions" type="List" />
+    <aura:attribute name="Docs" type="Contact[]" />
     <aura:handler name="init" value="{!this}" action="{!c.init}" />
-<!--
-    <lightning:select name="specialtyId" label="Select a specialty:" aura:id="specialtyId" value="{!v.selectedValue}">
-        <aura:iteration items="{!v.specOptions}" var="option">
-            <option text="{!option}" value="{!option}" selected="{!option.selected}"/>
-        </aura:iteration>
-    </lightning:select>
--->
+    <aura:handler name="init" value="{!this}" action="{!c.SortDoctor}" />
+    
+    <!--" onchange="{!c.SortDoctor}" onchange="{!c.SortDoctor}"-->
     <div class="slds-grid">
-       
         <div class="slds-col slds-size_1-of-3">
-            
-            <lightning:select name="specialtyId" label="Select a specialty:" aura:id="specialtyId" value="{!specialty}">
-                <aura:iteration items="{!v.specOptions}" var="specOpts">
-                    <option text="{!specOpts}" value="{!specOpts}" selected="{!specOpts.selected}"/>
+            <lightning:select name="specialtyId" label="Select a Specialty:" aura:id="specialtyId" value=" Specialty" onchange="{!c.SortDoctor}">
+                <aura:iteration items="{!v.specOptions}" var="specOption">
+                    <option text="{!specOption}" value="{!specOption}" selected="{!specOption.selected}"/>
                 </aura:iteration>
             </lightning:select>
         </div>
         <div class="slds-col slds-size_1-of-3">
-            <lightning:select name="genderId" label="Select a gender:" aura:id="genderId" value="{!gender}">
-                <aura:iteration items="{!v.gendOptions}" var="gendOpts">
-                    <option text="{!gendOpts}" value="{!gendOpts}" selected="{!gendOpts.selected}"/>
+            <lightning:select name="genderId" label="Select a Gender:" aura:id="genderId" value="Gender" onchange="{!c.SortDoctor}">
+                <aura:iteration items="{!v.genderOptions}" var="genderOption">
+                    <option text="{!genderOption}" value="{!genderOption}" selected="{!genderOption.selected}"/>
                 </aura:iteration>
             </lightning:select>
         </div>
-        <!--
         <div class="slds-col slds-size_1-of-3">
-            <lightning:select name="specialtyId" label="Select a specialty:" aura:id="specialtyId" value="{!v.selectedValue}">
-                <aura:iteration items="{!v.specOptions}" var="option">
-                    <option text="{!option}" value="{!option}" selected="{!option.selected}"/>
+            <lightning:select name="langId" label="Select a Language:" aura:id="langId" value="Languages" onchange="{!c.SortDoctor}">
+                <aura:iteration items="{!v.langOptions}" var="langOption">
+                    <option text="{!langOption}" value="{!langOption}" selected="{!langOption.selected}"/>
                 </aura:iteration>
             </lightning:select>
         </div>
-        -->
     </div>
-
-
-
+    <div class="slds-box">
+        <div class="slds-text-heading_large">Available Doctors</div>
+        <br/>
+        <div class="slds-grid">
+            <div class="slds-col slds-size_1-of-4">
+                Doctor Contact
+            </div>
+            <div class="slds-col slds-size_1-of-4">
+                Specialty
+            </div>
+            <div class="slds-col slds-size_1-of-4">
+                Gender
+            </div>
+            <div class="slds-col slds-size_1-of-4">
+                Languages
+            </div>
+        </div>
+        <aura:iteration items="{!v.Docs}" var="doc"> 
+            <c:DoctorSingle docID="{! doc.Id }" />
+        </aura:iteration>
+    </div>
 </aura:component>

@@ -23,8 +23,8 @@
     <requireHttps>true</requireHttps>
     <requireInsecurePortalAccess>false</requireInsecurePortalAccess>
     <selfRegPage>CommunitiesSelfReg</selfRegPage>
-    <siteAdmin>francesco.ward@cunning-otter-qxiaf4.com</siteAdmin>
+    <siteAdmin>bailey.dawkins@curious-bear-stvn9.com</siteAdmin>
     <siteType>ChatterNetwork</siteType>
-    <subdomain>southern-heart-teambig-developer-edition</subdomain>
+    <subdomain>southernheart61561-developer-edition</subdomain>
     <urlPathPrefix>doctor</urlPathPrefix>
 </CustomSite>
