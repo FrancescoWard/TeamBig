@@ -39,7 +39,7 @@
 		
 	},
     
-    changeStatus : function (row, action, component)
+    openModalBox : function (row, action, component)
     {	let box = component.find('modalbox');
      	$A.createComponent(	"c:DoctorMessageModal",
           					{ "appt_status" : action.name },
@@ -51,19 +51,20 @@
                                 } else console.log(status);
                             } 
                           );
-     	console.log(component.get("v.message"));
-    }
-})
-
-    /*
-    getUser : function (component)
-    {  	let action = component.get("c.getCurrentUser");
-     	action.setCallback	( this, function (response) 
-        {	console.log("Reached Apex function!");
-            if ( response.getState() == "SUCCESS" )
-                component.set("v.currentuser", response.getReturnValue());
-         	else console.log("Something went wrong.");
-     	}                  	);
-     	$A.enqueueAction(action);
     },
-    */
+    
+    updateApptHelper : function (component, event, row) 
+    {	let action = component.get( "c.updateAppointment" );
+     	action.setParams( 	
+        { 	msg : event.getParam('message'), 
+            status : event.getParam('status'),
+            apptId : row.Id 
+        }               );
+     	action.setCallback	( this, function (response) 
+        {	// refresh the view
+            $A.get("e.force:refreshView").fire();
+        } 					);
+     	$A.enqueueAction(action);
+    }
+    
+})
