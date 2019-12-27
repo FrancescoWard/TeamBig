@@ -1,9 +1,9 @@
 public class DataFactory 
 {	// Save record type ID's for contact as final strings
-    static final String recTypeDoc = Schema.SObjectType.Contact.getRecordTypeInfosByName()
-                                        	.get('Doctor').getRecordTypeId();
-    static final String recTypeCust = Schema.SObjectType.Contact.getRecordTypeInfosByName()
-                                        	.get('Customer').getRecordTypeId();
+    public static final String recTypeDoc = Schema.SObjectType.Contact.getRecordTypeInfosByName()
+                                        			.get('Doctor').getRecordTypeId();
+    public static final String recTypeCust = Schema.SObjectType.Contact.getRecordTypeInfosByName()
+                                        			.get('Customer').getRecordTypeId();
     
     public static void createData( Integer n )
     {   // Initialize list objects to populate and insert
@@ -79,7 +79,7 @@ public class DataFactory
         insert appList;
     }
     // Create many appointments between the same two contacts
-/*    public static void CreateAppts (Contact dr, Contact cust, Integer n)
+    public static void CreateAppts (Contact dr, Contact cust, Integer n)
     {	List<Appointment__c> applist = new List<Appointment__c>();
      	for ( Integer i = 0 ; i < 1 ; i++ )
         {	applist.add( new Appointment__c	(   Status__c = 'Pending',
@@ -91,17 +91,15 @@ public class DataFactory
         }
      	insert applist;
     }
-  */  
     public static void DestroyData ()
     {
         List<Contact> dummyContacts = [ SELECT Id, LastName
                                        	FROM Contact 
                                        	WHERE LastName LIKE '%Last%'
                                       ];
-        List<Appointment__c> dummyAppts = [	SELECT Id 
-                                           	FROM Appointment__c
-                                          ];
-        delete dummyAppts;
+        // List<Appointment__c> dummyAppts = [	SELECT Id 
+        //                                   	FROM Appointment__c
+        //                                  ];
         delete dummyContacts;
     }
 }

@@ -2,9 +2,10 @@
     setCols : function ()
     {	const cols =
         [	{ 	label: 'Date', fieldName: 'Start_Time__c', type: 'date' },
-         	{	label: 'Time', fieldName: 'Start_Time__c', type: 'time' },
+         	{	label: 'Time', fieldName: 'Time', type: 'text', },
          	{	label: 'Patient', fieldName: 'CustomerName', type: 'text' },
             {	label: 'Status', fieldName: 'Status__c', type: 'text' },
+         	{	label: 'Message', fieldName: 'Message__c', type: 'text' },
             {	label: '', type: 'button', initialWidth: 135, typeAttributes: 
                	{ 	label : 'Accept', 
                    	name : 'Accept', 
@@ -25,13 +26,14 @@
 
 	loadAppts : function (component) 
     {	let action = component.get( "c.getDoctorAppts" );
-     	// action.setParams( { u : $A.get("$SObjectType.CurrentUser.Id") } );
      	action.setCallback( this, function (response)
         {	if ( response.getState() == "SUCCESS" )
             {	let rows = response.getReturnValue();
              	for ( let row of rows )
-                    row.CustomerName = row.Customer_Contact__r.Name;
-                component.set("v.data", response.getReturnValue() );
+                {   row.CustomerName = row.Customer_Contact__r.Name;
+                 	row.Time = $A.localizationService.formatDate(row.Start_Time__c, "hh:mm a");
+                } 
+             	component.set("v.data", response.getReturnValue() );
             }
         }
                           );
@@ -55,6 +57,7 @@
     
     updateApptHelper : function (component, event, row) 
     {	let action = component.get( "c.updateAppointment" );
+     	console.log(event.getParam('message'));
      	action.setParams( 	
         { 	msg : event.getParam('message'), 
             status : event.getParam('status'),

@@ -15,12 +15,21 @@ public class DataFactoryTest {
         Test.stopTest();
     }
     
-/*    @isTest
+    @isTest
     public static void testAppts ()
-    {	Contact dr = new Contact( FirstName = 'Doctor', LastName = 'Test' );
-     	Contact cust = new Contact( FirstName = 'Customer', LastName = 'Test' );
+    {	Contact dr = new Contact( FirstName = 'Doctor', LastName = 'Test0000' );
+     	Contact cust = new Contact( FirstName = 'Customer', LastName = 'Test0000' );
+     	cust.RecordTypeId = DataFactory.recTypeCust;
      	insert dr; insert cust;
      	DataFactory.createAppts(dr, cust, 4);
-        
     }
-*/}
+    
+    @isTest
+    public static void testDestroy ()
+    {
+        Test.startTest();
+        DataFactory.createData(10);
+        Test.stopTest();
+        DataFactory.DestroyData();
+    }
+}

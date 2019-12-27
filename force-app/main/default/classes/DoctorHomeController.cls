@@ -3,21 +3,22 @@ public class DoctorHomeController
     @AuraEnabled
 	public static List<Appointment__c> getDoctorAppts ( )
     {	// get community contact id from current user id
-        // User u = [ SELECT Id, ContactId FROM User WHERE id =: userInfo.getUserId()];
-        // Contact dr = [ SELECT Id FROM Contact WHERE id =: u.ContactId ];
+        User u = [ SELECT Id, ContactId FROM User WHERE id =: userInfo.getUserId()];
+        Contact dr = [ SELECT Id FROM Contact WHERE id =: u.ContactId ];
         // return all appointments connected to doctor along with their related customers
         List<Appointment__c> allAppts = 
-        	[ 	SELECT Id, Start_Time__c, Status__c, Customer_Contact__r.Id, Customer_Contact__r.Name
+        	[ 	SELECT Id, Start_Time__c, Message__c, Status__c, Customer_Contact__r.Id, Customer_Contact__r.Name
                 FROM Appointment__c
              	// WHERE Status__c = 'Pending'
-             	// AND Doctor_Contact__c = :dr.Id
+             	WHERE Doctor_Contact__c = :dr.Id
             ];
         return allAppts;
     }
     
     @AuraEnabled
     public static void updateAppointment (String msg, String status, String apptId)
-    {	Appointment__c thisAppt = 
+    {	// System.debug(msg);
+        Appointment__c thisAppt = 
         	[	SELECT Id, Status__c, Message__c 
                 FROM Appointment__c
                 WHERE Id =: apptId
@@ -25,6 +26,7 @@ public class DoctorHomeController
      	if (status == 'Accept') thisAppt.Status__c = 'Confirmed';
      	else thisAppt.Status__c = 'Cancelled';
      	thisAppt.Message__c = msg;
+     	// System.debug(thisAppt.Message__c);
      	update thisAppt;
     }
 }

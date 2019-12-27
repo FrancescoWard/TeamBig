@@ -10,5 +10,23 @@ public class DoctorHomeControllerTest
 				- Inserts a fake appointment
 				- Updates the appointment with UpdateAppointment()
 		*/
+        DataFactory.createData(1); // create one doctor, one customer, and one appt between them
+        Contact customer = [ 	SELECT Id
+                            	FROM Contact 
+                            	WHERE RecordTypeId =: DataFactory.recTypeCust 
+                            	AND LastName LIKE '%Last0' 
+                           ][0];
+        Appointment__c myApp = [ 	SELECT Id, Status__c, Message__c 
+                                	FROM Appointment__c 
+                                	WHERE Customer_Contact__c =: customer.Id 
+                               ];
+        DoctorHomeController.updateAppointment( 'Test', 'Reject', (String) myApp.id );
+        Appointment__c checkApp = 
+        	[	SELECT Id, Message__c, Status__c
+                FROM Appointment__c
+                WHERE Id =: myApp.Id
+            ];
+        System.assertEquals(checkApp.Status__c, 'Cancelled');
+        System.assertEquals(checkApp.Message__c, 'Test');
     }
 }

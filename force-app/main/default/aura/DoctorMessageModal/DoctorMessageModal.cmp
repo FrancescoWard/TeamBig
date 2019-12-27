@@ -11,7 +11,7 @@
           <div class="slds-modal__container">
             <div class="slds-modal__content slds-p-around--medium">
                <div align="center" draggable="false">
-                    <lightning:textarea aura:id="drmsg" 
+                   	<lightning:textarea aura:id="drmsg" 
                                         label="Leave a message for the customer" />
                     <lightning:button variant="brand" 
                                       label="{!v.appt_status}" 
