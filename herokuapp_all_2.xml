@@ -11,6 +11,10 @@
     <members>CommunitiesSelfRegConfirmControllerTest</members>
     <members>CommunitiesSelfRegController</members>
     <members>CommunitiesSelfRegControllerTest</members>
+    <members>DataFactory</members>
+    <members>DataFactoryTest</members>
+    <members>DoctorHomeController</members>
+    <members>DoctorHomeControllerTest</members>
     <members>ForgotPasswordController</members>
     <members>ForgotPasswordControllerTest</members>
     <members>LightningForgotPasswordController</members>
@@ -80,11 +84,15 @@
     <name>AssignmentRules</name>
   </types>
   <types>
+    <members>CommunityBuilderTest</members>
+    <members>DoctorApptList</members>
+    <members>DoctorMessageModal</members>
     <members>forgotPassword</members>
     <members>loginForm</members>
     <members>selfRegister</members>
     <members>setExpId</members>
     <members>setStartUrl</members>
+    <members>UpdateStatus</members>
     <name>AuraDefinitionBundle</name>
   </types>
   <types>
@@ -129,10 +137,12 @@
     <members>Account.SLAExpirationDate__c</members>
     <members>Account.SLASerialNumber__c</members>
     <members>Account.UpsellOpportunity__c</members>
+    <members>Appointment__c.Contact__c</members>
+    <members>Appointment__c.Customer_Contact__c</members>
+    <members>Appointment__c.Doctor_Contact__c</members>
     <members>Appointment__c.End_Time__c</members>
     <members>Appointment__c.Message__c</members>
-    <members>AppointmentContact__c.Appointment__c</members>
-    <members>AppointmentContact__c.Contact__c</members>
+    <members>Appointment__c.Residence__c</members>
     <members>Appointment__c.Start_Time__c</members>
     <members>Appointment__c.Status__c</members>
     <members>Case.EngineeringReqNumber__c</members>
@@ -142,6 +152,8 @@
     <members>Contact.Gender__c</members>
     <members>Contact.Languages__c</members>
     <members>Contact.Level__c</members>
+    <members>ContactResidence__c.Contact__c</members>
+    <members>ContactResidence__c.Residence__c</members>
     <members>Contact.Speciality__c</members>
     <members>Goal.OrigGoalId__c</members>
     <members>Lead.CurrentGenerators__c</members>
@@ -174,7 +186,6 @@
     <members>AccountContactRole</members>
     <members>Activity</members>
     <members>Appointment__c</members>
-    <members>AppointmentContact__c</members>
     <members>Asset</members>
     <members>AssetRelationship</members>
     <members>AssistantProgress</members>
@@ -198,6 +209,7 @@
     <members>ContactCleanInfo</members>
     <members>ContactPointTypeConsent</members>
     <members>ContactRequest</members>
+    <members>ContactResidence__c</members>
     <members>ContentVersion</members>
     <members>Contract</members>
     <members>ContractContactRole</members>
@@ -256,6 +268,14 @@
     <members>Solution</members>
     <members>StreamActivityAccess</members>
     <members>StreamingChannel</members>
+    <members>Survey</members>
+    <members>SurveyInvitation</members>
+    <members>SurveyPage</members>
+    <members>SurveyQuestionChoice</members>
+    <members>SurveyQuestionResponse</members>
+    <members>SurveyResponse</members>
+    <members>SurveySubject</members>
+    <members>SurveyVersion</members>
     <members>Task</members>
     <members>Topic</members>
     <members>TopicAssignment</members>
@@ -268,12 +288,13 @@
   </types>
   <types>
     <members>Appointment__c-en_US</members>
-    <members>AppointmentContact__c-en_US</members>
+    <members>ContactResidence__c-en_US</members>
     <members>Residence__c-en_US</members>
     <name>CustomObjectTranslation</name>
   </types>
   <types>
     <members>Customer</members>
+    <members>Doctor</members>
     <name>CustomSite</name>
   </types>
   <types>
@@ -293,6 +314,8 @@
     <members>unfiled$public/CommunityLockoutEmailTemplate</members>
     <members>unfiled$public/CommunityVerificationEmailTemplate</members>
     <members>unfiled$public/CommunityWelcomeEmailTemplate</members>
+    <members>unfiled$public/Embed_a_Survey_Link</members>
+    <members>unfiled$public/Embed_a_Survey_Question</members>
     <members>unfiled$public/MarketingProductInquiryResponse</members>
     <members>unfiled$public/SalesNewCustomerEmail</members>
     <members>unfiled$public/SupportCaseAssignmentNotification</members>
@@ -319,7 +342,22 @@
   <types>
     <members>LightningSalesConsole_UtilityBar</members>
     <members>LightningService_UtilityBar</members>
+    <members>Residences</members>
     <name>FlexiPage</name>
+  </types>
+  <types>
+    <members>Appointment_Completion_Actions</members>
+    <members>customer_satisfaction</members>
+    <members>net_promoter_score</members>
+    <members>southern_heart_customer_satisfaction</members>
+    <name>Flow</name>
+  </types>
+  <types>
+    <members>Appointment_Completion_Actions</members>
+    <members>customer_satisfaction</members>
+    <members>net_promoter_score</members>
+    <members>southern_heart_customer_satisfaction</members>
+    <name>FlowDefinition</name>
   </types>
   <types>
     <members>DE Default</members>
@@ -333,6 +371,7 @@
   </types>
   <types>
     <members>Customer.Banned</members>
+    <members>Doctor.Banned</members>
     <name>KeywordList</name>
   </types>
   <types>
@@ -342,7 +381,6 @@
     <members>Account-Account Layout</members>
     <members>AccountBrand-Account Brand Layout</members>
     <members>Appointment__c-Appointment Layout</members>
-    <members>AppointmentContact__c-AppointmentContact Layout</members>
     <members>Asset-Asset Layout</members>
     <members>AssetRelationship-Asset Relationship Layout</members>
     <members>AuthorizationForm-Authorization Form Layout</members>
@@ -364,6 +402,7 @@
     <members>Contact-Contact %28Support%29 Layout</members>
     <members>Contact-Contact Layout</members>
     <members>ContactPointTypeConsent-Contact Point Type Consent Layout</members>
+    <members>ContactResidence__c-ContactResidence Layout</members>
     <members>ContentVersion-Content Version Layout</members>
     <members>Contract-Contract Layout</members>
     <members>DandBCompany-D%26B Company Layout</members>
@@ -399,6 +438,8 @@
     <members>SocialPersona-Social Persona Layout</members>
     <members>SocialPost-Social Post Layout</members>
     <members>Solution-Solution Layout</members>
+    <members>Survey-Survey Layout</members>
+    <members>SurveyVersion-Survey Version Layout</members>
     <members>Task-Task Layout</members>
     <members>UserAlt-User Profile Layout</members>
     <members>UserProvAccount-User Provisioning Account Layout</members>
@@ -495,6 +536,8 @@
     <members>SocialPersona.AllSocialPersonas</members>
     <members>Solution.AllReviewedSolutions</members>
     <members>Solution.AllUnreviewedSolutions</members>
+    <members>Survey.All_Surveys</members>
+    <members>Survey.My Surveys</members>
     <members>Task.CompletedTasks</members>
     <members>Task.DelegatedTasks</members>
     <members>Task.OpenTasks</members>
@@ -513,6 +556,8 @@
   <types>
     <members>Customer</members>
     <members>Customer</members>
+    <members>Doctor</members>
+    <members>Doctor</members>
     <name>ManagedTopics</name>
   </types>
   <types>
@@ -534,18 +579,26 @@
     <members>Customer.Freeze_for_frequent_posting</members>
     <members>Customer.Replace_banned</members>
     <members>Customer.Review_the_first_post</members>
+    <members>Doctor.Block_banned_keywords</members>
+    <members>Doctor.Flag_banned</members>
+    <members>Doctor.Freeze_for_frequent_posting</members>
+    <members>Doctor.Replace_banned</members>
+    <members>Doctor.Review_the_first_post</members>
     <name>ModerationRule</name>
   </types>
   <types>
     <members>Default_Navigation</members>
+    <members>Default_Navigation1</members>
     <name>NavigationMenu</name>
   </types>
   <types>
     <members>Customer</members>
+    <members>Doctor</members>
     <name>Network</name>
   </types>
   <types>
     <members>cbCustomer</members>
+    <members>cbDoctor</members>
     <name>NetworkBranding</name>
   </types>
   <types>
@@ -568,6 +621,7 @@
     <members>Customer Portal Manager Custom</members>
     <members>Customer Portal Manager Standard</members>
     <members>Customer Profile</members>
+    <members>Doctor Profile</members>
     <members>External Identity User</members>
     <members>Force%2Ecom - App Subscription User</members>
     <members>Force%2Ecom - Free User</members>
@@ -661,6 +715,8 @@
     <members>EasternSalesTeam</members>
     <members>InstallationRepairServices</members>
     <members>MarketingTeam</members>
+    <members>SouthernHeartCustomerUser</members>
+    <members>SouthernHeartPartnerUser</members>
     <members>SVPCustomerServiceSupport</members>
     <members>SVPHumanResources</members>
     <members>SVPSalesMarketing</members>
@@ -818,6 +874,8 @@
     <members>SiqUserBlacklist</members>
     <members>StreamActivityAccess</members>
     <members>StreamingChannel</members>
+    <members>Survey</members>
+    <members>SurveyInvitation</members>
     <members>TodayGoal</members>
     <members>User</members>
     <members>UserAppMenuCustomization</members>
@@ -830,6 +888,7 @@
   </types>
   <types>
     <members>Customer1</members>
+    <members>Doctor1</members>
     <name>SiteDotCom</name>
   </types>
   <types>
@@ -843,13 +902,13 @@
   <types>
     <members>Account</members>
     <members>Appointment__c</members>
-    <members>AppointmentContact__c</members>
     <members>Asset</members>
     <members>Campaign</members>
     <members>Case</members>
     <members>ChannelProgram</members>
     <members>ChannelProgramLevel</members>
     <members>Contact</members>
+    <members>ContactResidence__c</members>
     <members>ContentDocument</members>
     <members>Contract</members>
     <members>Event</members>
@@ -862,6 +921,10 @@
     <members>PartnerMarketingBudget</members>
     <members>Residence__c</members>
     <members>Solution</members>
+    <members>Survey</members>
+    <members>SurveyQuestion</members>
+    <members>SurveyQuestionChoice</members>
+    <members>SurveyQuestionResponse</members>
     <members>Task</members>
     <name>TopicsForObjects</name>
   </types>
@@ -869,6 +932,9 @@
     <members>Customer.Customer_Members</members>
     <members>Customer.Members_without_contribution</members>
     <members>Customer.Partner_and_Customer_members</members>
+    <members>Doctor.Customer_Members</members>
+    <members>Doctor.Members_without_contribution</members>
+    <members>Doctor.Partner_and_Customer_members</members>
     <name>UserCriteria</name>
   </types>
   <types>

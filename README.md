@@ -18,3 +18,5 @@ When deploying, you'll also have to replace the username in the <siteAdmin> tag 
 ## Add Community Customer and Partner Users for Testing
 
 When you deploy your org, it's obviously all metadata.  But if you want to actually look at our functionality you need test data, or at least a few activated doctors and customers.
+
+We have a Data Factory Apex class that eases at least some of these pains.  Open the Developer Console, then hit Debug, then "Execute Anonymous Window."  The Data Factory has two methods for creating data: 

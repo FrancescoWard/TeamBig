@@ -49,6 +49,7 @@
         <members>Org</members>
         <members>Sharing</members>
         <members>Security</members>
+        <members>Survey</members>
         <members>Communities</members>
         <name>Settings</name>
     </types>
@@ -87,6 +88,14 @@
     <types>
         <members>*</members>
         <name>Network</name>
+    </types>
+    <types>                             <!-- 12/27: Surveys and processes to launch them added -->
+        <members>*</members>
+        <name>Flow</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>FlowDefinition</name>
     </types>
     <version>47.0</version>
 </Package>
