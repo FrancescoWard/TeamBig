@@ -23,14 +23,8 @@
     <requireHttps>true</requireHttps>
     <requireInsecurePortalAccess>false</requireInsecurePortalAccess>
     <selfRegPage>CommunitiesSelfReg</selfRegPage>
-<<<<<<< HEAD
     <siteAdmin>francesco.ward@cunning-otter-qxiaf4.com</siteAdmin>
     <siteType>ChatterNetwork</siteType>
     <subdomain>southernheart2536-developer-edition</subdomain>
-=======
-    <siteAdmin>hazratzai.sabir@curious-wolf-upcosk.com</siteAdmin>
-    <siteType>ChatterNetwork</siteType>
-    <subdomain>proj2-developer-edition</subdomain>
->>>>>>> 3cb1b8c25607bf640e32f21bb0d602fedffacaaa
     <urlPathPrefix>doctor</urlPathPrefix>
 </CustomSite>
