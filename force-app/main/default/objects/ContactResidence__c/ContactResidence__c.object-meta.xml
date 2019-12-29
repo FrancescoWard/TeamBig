@@ -153,13 +153,13 @@
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>ControlledByParent</externalSharingModel>
-    <label>Contact Residence</label>
+    <label>ContactResidence</label>
     <nameField>
         <displayFormat>ContactResidence-{0000}</displayFormat>
         <label>ContactResidence Name</label>
         <type>AutoNumber</type>
     </nameField>
-    <pluralLabel>Contact Residences</pluralLabel>
+    <pluralLabel>ContactResidences</pluralLabel>
     <searchLayouts/>
     <sharingModel>ControlledByParent</sharingModel>
     <visibility>Public</visibility>
