@@ -14,8 +14,8 @@
         <isOptional>false</isOptional>
     </lookupFilter>
     <referenceTo>Contact</referenceTo>
-    <relationshipLabel>Appointments</relationshipLabel>
-    <relationshipName>Appointments</relationshipName>
+    <relationshipLabel>Appointments2</relationshipLabel>
+    <relationshipName>Appointments2</relationshipName>
     <required>false</required>
     <trackTrending>false</trackTrending>
     <type>Lookup</type>
