@@ -16,13 +16,11 @@
             <axisBinding>y</axisBinding>
             <column>RowCount</column>
         </chartSummaries>
-        <chartType>VerticalColumnGrouped</chartType>
+        <chartType>VerticalColumn</chartType>
         <enableHoverLabels>false</enableHoverLabels>
         <expandOthers>true</expandOthers>
         <groupingColumn>Appointment__c$Doctor_Contact__c</groupingColumn>
-        <legendPosition>Right</legendPosition>
         <location>CHART_BOTTOM</location>
-        <secondaryGroupingColumn>Appointment__c$Start_Time__c</secondaryGroupingColumn>
         <showAxisLabels>true</showAxisLabels>
         <showPercentage>false</showPercentage>
         <showTotal>false</showTotal>
@@ -37,18 +35,19 @@
     <columns>
         <field>Appointment__c$Name</field>
     </columns>
+    <columns>
+        <field>Appointment__c$Start_Time__c</field>
+    </columns>
+    <columns>
+        <field>Appointment__c$Customer_Contact__c</field>
+    </columns>
     <format>Summary</format>
     <groupingsDown>
         <dateGranularity>Day</dateGranularity>
         <field>Appointment__c$Doctor_Contact__c</field>
         <sortOrder>Asc</sortOrder>
     </groupingsDown>
-    <groupingsDown>
-        <dateGranularity>Week</dateGranularity>
-        <field>Appointment__c$Start_Time__c</field>
-        <sortOrder>Asc</sortOrder>
-    </groupingsDown>
-    <name>Frequency of Doctor visits</name>
+    <name>Appointments Grouped by Doctor</name>
     <params>
         <name>co</name>
         <value>1</value>
@@ -56,8 +55,8 @@
     <reportType>Appointments__c</reportType>
     <scope>organization</scope>
     <showDetails>true</showDetails>
-    <showGrandTotal>true</showGrandTotal>
-    <showSubTotals>true</showSubTotals>
+    <showGrandTotal>false</showGrandTotal>
+    <showSubTotals>false</showSubTotals>
     <timeFrameFilter>
         <dateColumn>Appointment__c$CreatedDate</dateColumn>
         <interval>INTERVAL_CURRENT</interval>

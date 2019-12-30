@@ -2,13 +2,9 @@
 <ReportType xmlns="http://soap.sforce.com/2006/04/metadata">
     <baseObject>Appointment__c</baseObject>
     <category>other</category>
-    <deployed>false</deployed>
-    <description>test report for monitoring appointments</description>
-    <join>
-        <outerJoin>true</outerJoin>
-        <relationship>AppointmentContacts__r</relationship>
-    </join>
-    <label>Custom Appointments report</label>
+    <deployed>true</deployed>
+    <description>Appoitnment Report Type</description>
+    <label>Appointments</label>
     <sections>
         <columns>
             <checkedByDefault>false</checkedByDefault>
@@ -22,7 +18,7 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>Contact__c</field>
+            <field>CreatedDate</field>
             <table>Appointment__c</table>
         </columns>
         <columns>
@@ -32,27 +28,7 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>CreatedDate</field>
-            <table>Appointment__c</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Customer_Contact__c</field>
-            <table>Appointment__c</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Doctor_Contact__c</field>
-            <table>Appointment__c</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>End_Time__c</field>
-            <table>Appointment__c</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>LastActivityDate</field>
+            <field>LastModifiedDate</field>
             <table>Appointment__c</table>
         </columns>
         <columns>
@@ -62,17 +38,17 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>LastModifiedDate</field>
+            <field>LastActivityDate</field>
+            <table>Appointment__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>End_Time__c</field>
             <table>Appointment__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Message__c</field>
-            <table>Appointment__c</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Residence__c</field>
             <table>Appointment__c</table>
         </columns>
         <columns>
@@ -85,44 +61,26 @@
             <field>Status__c</field>
             <table>Appointment__c</table>
         </columns>
-        <masterLabel>Appointments</masterLabel>
-    </sections>
-    <sections>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>Id</field>
-            <table>Appointment__c.AppointmentContacts__r</table>
+            <field>Doctor_Contact__c</field>
+            <table>Appointment__c</table>
         </columns>
         <columns>
-            <checkedByDefault>true</checkedByDefault>
-            <field>Name</field>
-            <table>Appointment__c.AppointmentContacts__r</table>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Customer_Contact__c</field>
+            <table>Appointment__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Contact__c</field>
-            <table>Appointment__c.AppointmentContacts__r</table>
+            <table>Appointment__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>CreatedBy</field>
-            <table>Appointment__c.AppointmentContacts__r</table>
+            <field>Residence__c</field>
+            <table>Appointment__c</table>
         </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>CreatedDate</field>
-            <table>Appointment__c.AppointmentContacts__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>LastModifiedBy</field>
-            <table>Appointment__c.AppointmentContacts__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>LastModifiedDate</field>
-            <table>Appointment__c.AppointmentContacts__r</table>
-        </columns>
-        <masterLabel>AppointmentContacts</masterLabel>
+        <masterLabel>Appointments</masterLabel>
     </sections>
 </ReportType>
