@@ -65,10 +65,10 @@
             <dashboardComponent>
                 <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
                 <chartAxisRange>Auto</chartAxisRange>
-                <chartSummary>
+                <!--<chartSummary>
                     <axisBinding>y</axisBinding>
                     <column>RowCount</column>
-                </chartSummary>
+                </chartSummary>-->
                 <componentType>Bar</componentType>
                 <displayUnits>Auto</displayUnits>
                 <drillEnabled>false</drillEnabled>
@@ -99,10 +99,10 @@
             <dashboardComponent>
                 <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
                 <chartAxisRange>Auto</chartAxisRange>
-                <chartSummary>
+                <!--<chartSummary>
                     <axisBinding>y</axisBinding>
                     <column>RowCount</column>
-                </chartSummary>
+                </chartSummary>-->
                 <componentType>Bar</componentType>
                 <displayUnits>Auto</displayUnits>
                 <drillEnabled>false</drillEnabled>

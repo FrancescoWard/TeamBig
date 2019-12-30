@@ -2,8 +2,8 @@
 <ReportFolder xmlns="http://soap.sforce.com/2006/04/metadata">
     <folderShares>
         <accessLevel>Manage</accessLevel>
-        <sharedTo>bailey.dawkins@curious-bear-stvn9.com</sharedTo>
+        <sharedTo>brady.achterberg@playful-fox-98ib6e.com</sharedTo>
         <sharedToType>User</sharedToType>
     </folderShares>
-    <name>SouthernHeartReports</name>
+    <name>Southern Heart Reports</name>
 </ReportFolder>
