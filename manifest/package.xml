@@ -112,6 +112,8 @@
         <members>SouthernHeartReports/New_Search_criteria_for_doctors_Report_qJW</members>
         <members>SouthernHeartReports/Weekly_appointment_frequency_euA</members>
         <members>SouthernHeartReports/Searches_Report_QgP</members>
+        <members>SouthernHeartReports/Specialty_Search_Report_DUr</members>
+        <members>SouthernHeartReports/Language_Search_Report_7dN</members>
 	    <name>Report</name>
 	</types>
     <types>
@@ -120,7 +122,8 @@
 	</types>
     <types>
         <members>SouthernHeartDashboardFolder</members>
-        <members>SouthernHeartDashboardFolder/DoctorSearchDashboard</members>
+        <members>SouthernHeartDashboardFolder/oTGzgelrCeFPgGQaDfdahqhxyXIdPv</members>
+        <members>SouthernHeartDashboardFolder/CFAxfFHYybyzYPBJbSOIIHnkMdmwHY</members>
         <name>Dashboard</name>
     </types>
     <version>47.0</version>

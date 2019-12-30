@@ -138,6 +138,10 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>TestDoctorTraits</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>TestFlagDoctors</apexClass>
         <enabled>false</enabled>
     </classAccesses>

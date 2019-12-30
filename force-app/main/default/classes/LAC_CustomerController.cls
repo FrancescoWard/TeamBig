@@ -23,7 +23,7 @@ public with sharing class LAC_CustomerController
 
         // Create record to count the Search
         Search__c search = new Search__c();
-            search.Search_Date__c = Date.today()
+            search.Search_Date__c = Date.today();
             search.Gender_Input__c = gender;
             search.Languages_Input__c = language;
             search.Specialty_Input__c = specialty;

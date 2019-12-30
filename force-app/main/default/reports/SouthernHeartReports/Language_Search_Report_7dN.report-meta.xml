@@ -14,7 +14,7 @@
         <groupingColumn>Search__c.Search_Date__c</groupingColumn>
         <legendPosition>Right</legendPosition>
         <location>CHART_BOTTOM</location>
-        <secondaryGroupingColumn>Search__c.Gender_Input__c</secondaryGroupingColumn>
+        <secondaryGroupingColumn>Search__c.Languages_Input__c</secondaryGroupingColumn>
         <showAxisLabels>true</showAxisLabels>
         <showPercentage>false</showPercentage>
         <showTotal>false</showTotal>
@@ -27,9 +27,8 @@
         <titleSize>18</titleSize>
     </chart>
     <columns>
-        <field>Search__c.Specialty_Input__c</field>
+        <field>CUST_NAME</field>
     </columns>
-    <description>Frequency of Doctor Searches</description>
     <format>Summary</format>
     <groupingsDown>
         <dateGranularity>Week</dateGranularity>
@@ -38,16 +37,16 @@
     </groupingsDown>
     <groupingsDown>
         <dateGranularity>Day</dateGranularity>
-        <field>Search__c.Gender_Input__c</field>
+        <field>Search__c.Languages_Input__c</field>
         <sortOrder>Asc</sortOrder>
     </groupingsDown>
-    <name>Gender Search Report</name>
+    <name>Language Search Report</name>
     <params>
         <name>co</name>
         <value>1</value>
     </params>
     <reportType>CustomEntity$Search__c</reportType>
-    <scope>organization</scope>
+    <scope>user</scope>
     <showDetails>false</showDetails>
     <showGrandTotal>true</showGrandTotal>
     <showSubTotals>false</showSubTotals>
