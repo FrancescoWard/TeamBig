@@ -96,6 +96,7 @@
 		<members>Appointment__c</members>
 		<members>ContactResidence__c</members>
 		<members>Residence__c</members>
+        <members>Search__c</members>
 		<name>CustomTab</name>
 	</types>
     <types>
