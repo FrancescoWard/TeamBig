@@ -23,8 +23,14 @@
     <requireHttps>true</requireHttps>
     <requireInsecurePortalAccess>false</requireInsecurePortalAccess>
     <selfRegPage>CommunitiesSelfReg</selfRegPage>
+<<<<<<< HEAD
     <siteAdmin>bailey.dawkins@curious-bear-stvn9.com</siteAdmin>
     <siteType>ChatterNetwork</siteType>
     <subdomain>southernheart61561-developer-edition</subdomain>
+=======
+    <siteAdmin>francesco.ward@cunning-otter-qxiaf4.com</siteAdmin>
+    <siteType>ChatterNetwork</siteType>
+    <subdomain>southernheart2536-developer-edition</subdomain>
+>>>>>>> 564f9a03ad476b05ce52ee00a3193b527ad75c4f
     <urlPathPrefix>customer</urlPathPrefix>
 </CustomSite>
