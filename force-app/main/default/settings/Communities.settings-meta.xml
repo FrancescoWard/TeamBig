@@ -8,7 +8,7 @@
     <enableEnablePRM>false</enableEnablePRM>
     <enableGuestRecordReassignOrgPref>false</enableGuestRecordReassignOrgPref>
     <enableInviteChatterGuestEnabled>true</enableInviteChatterGuestEnabled>
-    <enableNetPortalUserReportOpts>true</enableNetPortalUserReportOpts>
+    <enableNetPortalUserReportOpts>false</enableNetPortalUserReportOpts>
     <enableNetworksEnabled>true</enableNetworksEnabled>
     <enableOotbProfExtUserOpsEnable>false</enableOotbProfExtUserOpsEnable>
     <enablePRMAccRelPref>false</enablePRMAccRelPref>

@@ -1,6 +1,7 @@
 <aura:component implements="forceCommunity:availableForAllPageTypes"
                 controller="LAC_CustomerController">
     <!-- Define attributes and handle events-->
+    
     <aura:attribute name="specOptions" type="List" />
     <aura:attribute name="genderOptions" type="List" />
     <aura:attribute name="langOptions" type="List" />
@@ -32,25 +33,23 @@
             </lightning:select>
         </div>
     </div>
-    <div class="slds-box">
-        <div class="slds-text-heading_large">Available Doctors</div>
-        <br/>
-        <div class="slds-grid">
-            <div class="slds-col slds-size_1-of-4">
-                Doctor Contact
-            </div>
-            <div class="slds-col slds-size_1-of-4">
-                Specialty
-            </div>
-            <div class="slds-col slds-size_1-of-4">
-                Gender
-            </div>
-            <div class="slds-col slds-size_1-of-4">
-                Languages
-            </div>
+    <lightning:card title="Available Doctors" iconName="standard:search">
+             
+    <div>
+        <table>
+        <tr>
+            <td>Full Name</td><td>Speciality</td><td>Gender</td><td>Language</td>
+            </tr>
+        </table>
+        
+      <div style="height: 250px">
+    <lightning:datatable data="{! v.docList }"
+                         columns="{! v.mycolumns }"
+                         keyField="id"
+                         hideCheckboxColumn="true"/>
+    </div>      
+
+        
         </div>
-        <aura:iteration items="{!v.Docs}" var="doc"> 
-            <c:DoctorSingle docID="{! doc.Id }" />
-        </aura:iteration>
-    </div>
+        </lightning:card>
 </aura:component>

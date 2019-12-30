@@ -146,21 +146,23 @@
     <enableActivities>false</enableActivities>
     <enableBulkApi>true</enableBulkApi>
     <enableFeeds>false</enableFeeds>
-    <enableHistory>false</enableHistory>
+    <enableHistory>true</enableHistory>
     <enableLicensing>false</enableLicensing>
     <enableReports>true</enableReports>
     <enableSearch>true</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>ControlledByParent</externalSharingModel>
-    <label>ContactResidence</label>
+    <label>AppointmentContact</label>
     <nameField>
-        <displayFormat>ContactResidence-{0000}</displayFormat>
-        <label>ContactResidence Name</label>
+        <displayFormat>AppointmentContact-{0000}</displayFormat>
+        <label>AppointmentContact Name</label>
+        <trackHistory>false</trackHistory>
         <type>AutoNumber</type>
     </nameField>
-    <pluralLabel>ContactResidences</pluralLabel>
+    <pluralLabel>AppointmentContacts</pluralLabel>
     <searchLayouts/>
     <sharingModel>ControlledByParent</sharingModel>
+    <startsWith>Vowel</startsWith>
     <visibility>Public</visibility>
 </CustomObject>

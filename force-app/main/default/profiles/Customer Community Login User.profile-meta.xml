@@ -46,6 +46,14 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>ContactController</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>ContactSearchController</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>DataFactory</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -316,9 +324,9 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
+        <editable>true</editable>
         <field>Appointment__c.Residence__c</field>
-        <readable>false</readable>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
@@ -485,14 +493,6 @@
         <field>Residence__c.Street_Address__c</field>
         <readable>false</readable>
     </fieldPermissions>
-    <layoutAssignments>
-        <layout>Contact-Customer Layout</layout>
-        <recordType>Contact.Customer</recordType>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>Contact-Doctor Layout</layout>
-        <recordType>Contact.Doctor</recordType>
-    </layoutAssignments>
     <objectPermissions>
         <allowCreate>false</allowCreate>
         <allowDelete>false</allowDelete>
@@ -611,7 +611,7 @@
     </recordTypeVisibilities>
     <tabVisibilities>
         <tab>Appointment__c</tab>
-        <visibility>DefaultOn</visibility>
+        <visibility>Hidden</visibility>
     </tabVisibilities>
     <tabVisibilities>
         <tab>ContactResidence__c</tab>
