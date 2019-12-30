@@ -1,16 +1,21 @@
 ({
-    //Doctor search controller
+    // Initialize component
     onInit: function (component, event, helper) 
-    {	component.set( 'v.mycolumns', helper.setCols() );
-     	helper.loadPicklists(component);     
+    {	// Call helper to initialize table columns
+        component.set( 'v.mycolumns', helper.setCols() );
+     	// Call helper to load select lists with Apex calls
+        helper.loadPicklists(component);     
+        // Call helper to load doctors from the database
      	helper.loadDrs(component);
     },
+	// Called when user changes their selection
+    SortDoctor : function (component, event, helper) 
+    { 	// Call helper to load doctors from the database
+        helper.loadDrs(component); 
+    },
 
-    SortDoctor : function (component, event, helper) { helper.loadDrs(component); },
-
-    onRowAction : function ( component, event, helper ) {      
-        
-		let isOpenComp = component.get('v.isOpen');
+    onRowAction : function ( component, event, helper ) 
+    {	let isOpenComp = component.get('v.isOpen');
         var content = event.getParam("row").Id;
   		component.set('v.rowLast',content);
         component.set('v.isOpen', !isOpenComp);

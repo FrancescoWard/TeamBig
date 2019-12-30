@@ -5,11 +5,6 @@ public with sharing class LAC_CustomerController
     @AuraEnabled
     public static List<Contact> getDoctors(String specialty, String gender, String language) 
     {
-        // User u = [ SELECT Id, ContactId FROM User WHERE id =: userInfo.getUserId()];
-        // Contact dr = [ SELECT Id FROM Contact WHERE id =: u.ContactId ];
-        
-        // Id devRecordTypeId = Schema.SObjectType.Contact.getRecordTypeInfosByName().get('Customer').getRecordTypeId();
-        // Query all doctors searched
         String recTypeDoc = DoctorTraits.recTypeDoc;
         String q = 	'SELECT Id, Name, Speciality__c, Gender__c, Languages__c ' +
             		'FROM Contact ' +

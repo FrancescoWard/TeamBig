@@ -16,9 +16,9 @@
         ];
      	return cols;
     },
+    
     loadPicklists : function(component)
-    {
-        //Speciality
+    {   //Speciality
         let getSpecialityOptions = component.get("c.getAvailableDoctorSpecialtyOptions");
         
         getSpecialityOptions.setCallback(this, function(response) {
@@ -48,6 +48,7 @@
         $A.enqueueAction(getGenderOptions);
         $A.enqueueAction(getLangOptions);
     },
+    
 	loadDrs : function(component) 
     {	let specialty = component.find("specialtyId").get("v.value");
         let gender = component.find("genderId").get("v.value");
