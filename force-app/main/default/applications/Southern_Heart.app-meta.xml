@@ -16,6 +16,7 @@
     <tabs>standard-Contact</tabs>
     <tabs>standard-Account</tabs>
     <tabs>ContactResidence__c</tabs>
+    <tabs>Search__c</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>Southern_Heart_UtilityBar</utilityBar>
 </CustomApplication>
