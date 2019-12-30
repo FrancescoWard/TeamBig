@@ -26,19 +26,6 @@ public with sharing class LAC_CustomerController {
         
     }
 
-<<<<<<< HEAD
-    // getting List of doctors based on the gender, languages, and specialty
-    @AuraEnabled
-    public static List<Contact> getDoctors(String specialty, String gender, String language) {
-        List<Contact> docList = new List<Contact>();
-        Final String recTypeDoc = Schema.SObjectType.Contact.getRecordTypeInfosByName()
-                                        .get('Doctor').getRecordTypeId();
-        docList = database.query('Select Id, Name, Speciality__c, Gender__c, Languages__c From Contact Where RecordTypeId=:recTypeDoc AND Speciality__c=:specialty AND Gender__c=:gender AND Languages__c includes :language');
-		return docList;
-    } 
-
-=======
->>>>>>> 564f9a03ad476b05ce52ee00a3193b527ad75c4f
     // Returning a list of Strings filled with the picklist values of Specialty__c
     @AuraEnabled
     public static List<String> getAvailableDoctorSpecialtyOptions() {
@@ -74,8 +61,6 @@ public with sharing class LAC_CustomerController {
 		}
 		return pickListValuesList;
     }
-<<<<<<< HEAD
-=======
 
 
     @AuraEnabled
@@ -102,5 +87,4 @@ public with sharing class LAC_CustomerController {
             System.debug(exc.getMessage());
         } 
     }
->>>>>>> 564f9a03ad476b05ce52ee00a3193b527ad75c4f
 }
