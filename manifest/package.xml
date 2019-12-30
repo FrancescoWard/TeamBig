@@ -88,7 +88,7 @@
         <members>*</members>
         <name>Network</name>
     </types>
-    <types>
+    <types>                         <!-- 12/29: Full merge with other developers -->
 		<members>Southern_Heart</members>
 		<name>CustomApplication</name>
 	</types>

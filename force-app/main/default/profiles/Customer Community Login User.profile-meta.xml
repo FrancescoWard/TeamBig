@@ -3,7 +3,7 @@
     <applicationVisibilities>
         <application>Southern_Heart</application>
         <default>false</default>
-        <visible>true</visible>
+        <visible>false</visible>
     </applicationVisibilities>
     <classAccesses>
         <apexClass>ChangePasswordController</apexClass>
@@ -59,6 +59,10 @@
     </classAccesses>
     <classAccesses>
         <apexClass>DoctorHomeControllerTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>DoctorTraits</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -304,7 +308,7 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Appointment__c.End_Time__c</field>
-        <readable>true</readable>
+        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
@@ -317,7 +321,7 @@
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
+        <editable>true</editable>
         <field>Appointment__c.Status__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -372,6 +376,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>true</editable>
+        <field>Contact.Gender__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>false</editable>
         <field>Contact.HasOptedOutOfEmail</field>
         <readable>false</readable>
@@ -389,6 +398,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Contact.Jigsaw</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Contact.Languages__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -429,6 +443,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Contact.ReportsToId</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Contact.Speciality__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -596,11 +615,11 @@
     </tabVisibilities>
     <tabVisibilities>
         <tab>ContactResidence__c</tab>
-        <visibility>DefaultOn</visibility>
+        <visibility>Hidden</visibility>
     </tabVisibilities>
     <tabVisibilities>
         <tab>Residence__c</tab>
-        <visibility>DefaultOn</visibility>
+        <visibility>Hidden</visibility>
     </tabVisibilities>
     <tabVisibilities>
         <tab>standard-Account</tab>

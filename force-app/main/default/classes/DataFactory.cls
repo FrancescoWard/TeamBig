@@ -4,6 +4,10 @@ public class DataFactory
                                         			.get('Doctor').getRecordTypeId();
     public static final String recTypeCust = Schema.SObjectType.Contact.getRecordTypeInfosByName()
                                         			.get('Customer').getRecordTypeId();
+
+    static private List<String> genders = DoctorTraits.genderOptions();
+    static private List<String> languages = DoctorTraits.langOptions();
+    static private List<String> specialities = DoctorTraits.specOptions();
     
     public static void createData( Integer n )
     {   // Initialize list objects to populate and insert
@@ -51,7 +55,10 @@ public class DataFactory
             obj.AccountId = southernHeart.Id;
             obj.LastName = 'DrLast'+i;
             obj.recordTypeId = recTypeDoc;
-            obj.Gender__c = (0 == Math.mod( i , 2 ) ? 'Female': 'Male');
+         	obj.Gender__c = genders[ Integer.valueOf( Math.random() * genders.size() ) ];
+         	obj.Languages__c = languages[ Integer.valueOf( Math.random() * languages.size() ) ];
+         	obj.Speciality__c = specialities[ Integer.valueOf( Math.random() * specialities.size() ) ];
+            // obj.Gender__c = (0 == Math.mod( i , 2 ) ? 'Female': 'Male');
             drList.add(obj);
         } 
         upsert custList; upsert drList;

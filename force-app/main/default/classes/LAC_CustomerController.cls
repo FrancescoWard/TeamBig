@@ -1,4 +1,5 @@
-public with sharing class LAC_CustomerController {
+public with sharing class LAC_CustomerController 
+{
     //String userID = UserInfo.getUserId();
     //User user = database.query('Select FirstName, LastName From User Where Id=:userID Limit 1'); 
     
@@ -9,6 +10,20 @@ public with sharing class LAC_CustomerController {
         String userFullName = UserInfo.getName();
         Contact customer = database.query('Select Id, Name, Email, Phone From Contact Where Name=:userFullName Limit 1');
         return customer;
+    }
+    
+    @AuraEnabled
+	public static List<Appointment__c> getCustomerAppts ( )
+    {	// get community contact id from current user id
+        User u = [ SELECT Id, ContactId FROM User WHERE id =: userInfo.getUserId()];
+        Contact cust = [ SELECT Id FROM Contact WHERE id =: u.ContactId ];
+        // return all appointments connected to doctor along with their related customers
+        List<Appointment__c> allAppts = 
+        	[ 	SELECT Id, Start_Time__c, Message__c, Status__c, Doctor_Contact__r.Id, Doctor_Contact__r.Name
+                FROM Appointment__c
+             	WHERE Customer_Contact__c = :cust.Id
+            ];
+        return allAppts;
     }
 
     // getting List of Appointments based on the user ID logged in

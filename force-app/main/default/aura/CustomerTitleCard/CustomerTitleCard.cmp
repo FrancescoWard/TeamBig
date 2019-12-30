@@ -1,4 +1,5 @@
-<aura:component controller="LAC_CustomerController">
+<aura:component controller="LAC_CustomerController"
+                implements="forceCommunity:availableForAllPageTypes">
     <!-- Declare sObject for customer contact-->
     <aura:attribute name="customer" type="Contact" />
     
