@@ -1,8 +1,7 @@
 ({
+
     //Doctor search controller
     onInit: function (component, event, helper) {
-    
-           
         var cols = [
             {label: 'Full Name', fieldName: 'Name', type: 'text'},
                 {label: 'Speciality', fieldName: 'Speciality__c', type: 'Picklist'},
@@ -16,12 +15,11 @@
         			iconName: 'action:approval',
                     'label': 'Schedule',
                     'name': 'view_details'}}
-        
             ];
         
      
         
-     component.set( 'v.mycolumns', cols );
+        component.set( 'v.mycolumns', cols );
        // component.set( 'v.Docs', event.getParam( 'contacts' ) );
         
         //Speciality
@@ -49,10 +47,9 @@
             if(response.getState() === "SUCCESS") {
                 component.set("v.langOptions", response.getReturnValue());
             }
-            
         
         });
-                $A.enqueueAction(getSpecialityOptions);
+        $A.enqueueAction(getSpecialityOptions);
         $A.enqueueAction(getGenderOptions);
         $A.enqueueAction(getLangOptions);
        
@@ -74,16 +71,41 @@
         });
         $A.enqueueAction(getDoctors);
     },
-    onRowAction: function( component, event, helper ) {      
+
+    onRowAction : function ( component, event, helper ) {      
         
-		let isOpen = component.get('v.isOpen');
-        component.set('v.isOpen', !isOpen);
+		let isOpenComp = component.get('v.isOpen');
+        var content = event.getParam("row").Id;
+  		component.set('v.rowLast',content);
+        component.set('v.isOpen', !isOpenComp);
 	},
-        onAppSave:      function (cmp, event) {
-    var selectedRows = event.getParam('selectedRows');
-    // Display that fieldName of the selected rows
-    for (var i = 0; i < selectedRows.length; i++){
-        alert("You selected: " + selectedRows[i].Name);
-    }
-} 
+        
+    //book the appointment
+    onAppSave : function (component, event, helper) {
+        try
+        {
+
+            var doctorID = component.get("v.rowLast");
+            var time = component.find("dateId");
+            var bookAppointment = component.get('c.CreateApp');
+            bookAppointment.setParams({ "docID" : doctorID,
+                                        "startTime" : time.value });
+        
+            bookAppointment.setCallback(this, function(response) {
+                if(response.getState() === "SUCCESS") {
+                    
+                }
+            });
+            $A.enqueueAction(bookAppointment);
+            let isOpenComp = component.get('v.isOpen');
+            component.set('v.isOpen', !isOpenComp);
+            alert('Appointment created');
+
+            
+        }
+        catch(err)
+        {
+            alert(err);
+        }
+    },
 })

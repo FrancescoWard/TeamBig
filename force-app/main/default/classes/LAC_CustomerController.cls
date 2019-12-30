@@ -52,10 +52,6 @@ public with sharing class LAC_CustomerController {
         
     }
 
-    // getting List of doctors based on the gender, languages, and specialty
-    
-    
-
     // Returning a list of Strings filled with the picklist values of Specialty__c
     @AuraEnabled
     public static List<String> getAvailableDoctorSpecialtyOptions() {
@@ -98,5 +94,30 @@ public with sharing class LAC_CustomerController {
 		}
 		return pickListValuesList;
     }
-      
+
+
+    @AuraEnabled
+    public static void CreateApp(String docID, String startTime){
+        try 
+        {
+            //get the user name and get related customer
+            String userFullName = UserInfo.getName();
+			final String recTypeDoc = Schema.SObjectType.Contact.getRecordTypeInfosByName()
+                                        .get('Doctor').getRecordTypeId();
+            
+            //Contact doc = [Select ID From Contact WHERE ID=:docID Limit 1];
+            Contact cust = [Select Id, Name, Email, Phone From Contact Where Name=:userFullName Limit 1];
+
+            Id custId = cust.Id;
+            Appointment__c app = new Appointment__c();
+            app.Customer_Contact__c = custId;
+            app.Doctor_Contact__c = docID;
+            app.Start_Time__c = (null != startTime ? DateTime.parse(startTime) : DateTime.now().addDays(1));
+            insert app;
+        } 
+        catch (DmlException exc) 
+        {
+            System.debug(exc.getMessage());
+        } 
+    }
 }

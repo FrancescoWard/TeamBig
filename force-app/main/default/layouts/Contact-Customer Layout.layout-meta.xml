@@ -313,8 +313,6 @@
             <actionType>StandardButton</actionType>
             <sortOrder>23</sortOrder>
         </platformActionListItems>
-<<<<<<< HEAD
-=======
         <platformActionListItems>
             <actionName>CreateCallList</actionName>
             <actionType>StandardButton</actionType>
@@ -340,7 +338,6 @@
             <actionType>StandardButton</actionType>
             <sortOrder>28</sortOrder>
         </platformActionListItems>
->>>>>>> 3cb1b8c25607bf640e32f21bb0d602fedffacaaa
     </platformActionList>
     <quickActionList>
         <quickActionListItems>
