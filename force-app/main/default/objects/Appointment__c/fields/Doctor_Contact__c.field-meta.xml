@@ -11,7 +11,7 @@
             <operation>equals</operation>
             <value>Doctor</value>
         </filterItems>
-        <isOptional>false</isOptional>
+        <isOptional>true</isOptional>
     </lookupFilter>
     <referenceTo>Contact</referenceTo>
     <relationshipLabel>Appointments (Doctor Contact)</relationshipLabel>

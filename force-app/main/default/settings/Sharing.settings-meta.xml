@@ -6,7 +6,7 @@
     <enableExternalSharingModel>true</enableExternalSharingModel>
     <enableManagerGroups>false</enableManagerGroups>
     <enableManualUserRecordSharing>false</enableManualUserRecordSharing>
-    <enablePartnerSuperUserAccess>true</enablePartnerSuperUserAccess>
+    <enablePartnerSuperUserAccess>false</enablePartnerSuperUserAccess>
     <enablePortalUserVisibility>true</enablePortalUserVisibility>
     <enableRemoveTMGroupMembership>false</enableRemoveTMGroupMembership>
     <enableSecureGuestAccess>false</enableSecureGuestAccess>
