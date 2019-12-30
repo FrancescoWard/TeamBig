@@ -20,6 +20,9 @@ public with sharing class LAC_CustomerController
         System.debug(q);
         List<Contact> retlist = database.query(q);
         for ( Contact c : retlist ) System.debug('Contact: ' + c);
+
+        /* Search__c search = new Search__c();
+        search. */
         return retlist;
     }
     

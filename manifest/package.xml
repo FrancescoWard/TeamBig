@@ -96,6 +96,7 @@
 		<members>Appointment__c</members>
 		<members>ContactResidence__c</members>
 		<members>Residence__c</members>
+        <!--<members>Search__c</members>-->
 		<name>CustomTab</name>
 	</types>
     <types>
@@ -103,7 +104,7 @@
 		<members>Contact-Doctor Layout</members>
 		<name>Layout</name>
 	</types>
-     <types>
+    <!--<types>
 	    <members>SouthernHeartReports</members>
         <members>SouthernHeartReports/Flagged_Doctors_mRN</members>
         <members>SouthernHeartReports/Frequency_of_Appointments_for_Doctors_3io</members>
@@ -121,6 +122,6 @@
         <members>SouthernHeartDashboardFolder</members>
         <members>SouthernHeartDashboardFolder/DoctorSearchDashboard</members>
         <name>Dashboard</name>
-    </types>
+    </types>-->
     <version>47.0</version>
 </Package>
