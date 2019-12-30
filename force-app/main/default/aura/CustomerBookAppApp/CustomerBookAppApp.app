@@ -1,7 +1,5 @@
 <aura:application extends="force:slds">
-    
-    <c:DocMain />
+    <c:CustomerTitleCard />
+    <c:DoctorSearch />
     <c:BookApp /> 
-    
-    
 </aura:application>
