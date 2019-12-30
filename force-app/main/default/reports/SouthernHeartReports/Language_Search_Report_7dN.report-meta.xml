@@ -8,17 +8,17 @@
             <axisBinding>y</axisBinding>
             <column>RowCount</column>
         </chartSummaries>
-        <chartType>HorizontalBarGrouped</chartType>
+        <chartType>HorizontalBarStacked</chartType>
         <enableHoverLabels>false</enableHoverLabels>
         <expandOthers>true</expandOthers>
-        <groupingColumn>Contact$Gender__c</groupingColumn>
+        <groupingColumn>Search__c.Search_Date__c</groupingColumn>
         <legendPosition>Right</legendPosition>
         <location>CHART_BOTTOM</location>
-        <secondaryGroupingColumn>Contact$Speciality__c</secondaryGroupingColumn>
+        <secondaryGroupingColumn>Search__c.Languages_Input__c</secondaryGroupingColumn>
         <showAxisLabels>true</showAxisLabels>
         <showPercentage>false</showPercentage>
         <showTotal>false</showTotal>
-        <showValues>true</showValues>
+        <showValues>false</showValues>
         <size>Medium</size>
         <summaryAxisRange>Auto</summaryAxisRange>
         <textColor>#000000</textColor>
@@ -27,36 +27,31 @@
         <titleSize>18</titleSize>
     </chart>
     <columns>
-        <field>Contact.CustomerAppointments__r$Id</field>
+        <field>CUST_NAME</field>
     </columns>
     <format>Summary</format>
     <groupingsDown>
-        <dateGranularity>Day</dateGranularity>
-        <field>Contact$Gender__c</field>
+        <dateGranularity>Week</dateGranularity>
+        <field>Search__c.Search_Date__c</field>
         <sortOrder>Asc</sortOrder>
     </groupingsDown>
     <groupingsDown>
         <dateGranularity>Day</dateGranularity>
-        <field>Contact$Speciality__c</field>
+        <field>Search__c.Languages_Input__c</field>
         <sortOrder>Asc</sortOrder>
     </groupingsDown>
-    <groupingsDown>
-        <dateGranularity>Day</dateGranularity>
-        <field>Contact$Languages__c</field>
-        <sortOrder>Asc</sortOrder>
-    </groupingsDown>
-    <name>Appointments Scheduled for Each Criteria</name>
+    <name>Language Search Report</name>
     <params>
         <name>co</name>
         <value>1</value>
     </params>
-    <reportType>Search_criteria_for_doctors__c</reportType>
-    <scope>organization</scope>
+    <reportType>CustomEntity$Search__c</reportType>
+    <scope>user</scope>
     <showDetails>false</showDetails>
     <showGrandTotal>true</showGrandTotal>
     <showSubTotals>false</showSubTotals>
     <timeFrameFilter>
-        <dateColumn>Contact$Birthdate</dateColumn>
+        <dateColumn>Search__c.Search_Date__c</dateColumn>
         <interval>INTERVAL_CUSTOM</interval>
     </timeFrameFilter>
 </Report>

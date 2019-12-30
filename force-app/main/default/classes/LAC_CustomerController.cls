@@ -15,10 +15,17 @@ public with sharing class LAC_CustomerController
         System.debug(q);
         List<Contact> retlist = database.query(q);
         for ( Contact c : retlist ) System.debug('Contact: ' + c);
+
+        // Create record to count the Search
+        Search__c search = new Search__c();
+            search.Search_Date__c = Date.today();
+            search.Gender_Input__c = gender;
+            search.Languages_Input__c = language;
+            search.Specialty_Input__c = specialty;
+        insert search;
         return retlist;
     }
     
-
     // getting personal customer info based on the user ID logged in
     @AuraEnabled
     public static Contact getCustomerInfo() {

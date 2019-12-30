@@ -96,6 +96,7 @@
 		<members>Appointment__c</members>
 		<members>ContactResidence__c</members>
 		<members>Residence__c</members>
+        <members>Search__c</members>
 		<name>CustomTab</name>
 	</types>
     <types>
@@ -103,5 +104,27 @@
 		<members>Contact-Doctor Layout</members>
 		<name>Layout</name>
 	</types>
+    <types>
+	    <members>SouthernHeartReports</members>
+        <members>SouthernHeartReports/Flagged_Doctors_mRN</members>
+        <members>SouthernHeartReports/Frequency_of_Appointments_for_Doctors_3io</members>
+        <members>SouthernHeartReports/Frequency_of_Doctor_visits_OG5</members>
+        <members>SouthernHeartReports/New_Search_criteria_for_doctors_Report_qJW</members>
+        <members>SouthernHeartReports/Weekly_appointment_frequency_euA</members>
+        <members>SouthernHeartReports/Searches_Report_QgP</members>
+        <members>SouthernHeartReports/Specialty_Search_Report_DUr</members>
+        <members>SouthernHeartReports/Language_Search_Report_7dN</members>
+	    <name>Report</name>
+	</types>
+    <types>
+        <members>*</members>
+	    <name>ReportType</name>
+	</types>
+    <types>
+        <members>SouthernHeartDashboardFolder</members>
+        <members>SouthernHeartDashboardFolder/oTGzgelrCeFPgGQaDfdahqhxyXIdPv</members>
+        <members>SouthernHeartDashboardFolder/CFAxfFHYybyzYPBJbSOIIHnkMdmwHY</members>
+        <name>Dashboard</name>
+    </types>
     <version>47.0</version>
 </Package>
