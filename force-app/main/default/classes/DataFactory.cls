@@ -1,9 +1,9 @@
 public class DataFactory 
-{	
-    // Save doctor picklist vals as lists of strings
-    static private List<String> genders = DoctorTraits.genderOptions();
-    static private List<String> languages = DoctorTraits.langOptions();
-    static private List<String> specialities = DoctorTraits.specOptions();
+{	// Save record type ID's for contact as final strings
+    public static final String recTypeDoc = Schema.SObjectType.Contact.getRecordTypeInfosByName()
+                                        			.get('Doctor').getRecordTypeId();
+    public static final String recTypeCust = Schema.SObjectType.Contact.getRecordTypeInfosByName()
+                                        			.get('Customer').getRecordTypeId();
     
     public static void createData( Integer n )
     {   // Initialize list objects to populate and insert
@@ -43,18 +43,15 @@ public class DataFactory
         {   Contact obj = new Contact();
             obj.AccountId = southernHeart.Id;
             obj.LastName = 'Last'+i;
-            obj.recordTypeId = DoctorTraits.recTypeCust;
+            obj.recordTypeId = recTypeCust;
             custList.add(obj);
         }
         for (Integer i = 0 ; i < n ; i++)
         {	Contact obj = new Contact();
             obj.AccountId = southernHeart.Id;
             obj.LastName = 'DrLast'+i;
-            obj.recordTypeId = DoctorTraits.recTypeDoc;
-         	obj.Gender__c = genders[ Integer.valueOf( Math.random() * genders.size() ) ];
-         	obj.Languages__c = languages[ Integer.valueOf( Math.random() * languages.size() ) ];
-         	obj.Speciality__c = specialities[ Integer.valueOf( Math.random() * specialities.size() ) ];
-            // obj.Gender__c = (0 == Math.mod( i , 2 ) ? 'Female': 'Male');
+            obj.recordTypeId = recTypeDoc;
+            obj.Gender__c = (0 == Math.mod( i , 2 ) ? 'Female': 'Male');
             drList.add(obj);
         } 
         upsert custList; upsert drList;

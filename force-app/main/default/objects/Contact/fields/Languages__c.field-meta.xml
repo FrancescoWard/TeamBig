@@ -45,30 +45,6 @@
                 <default>false</default>
                 <label>Russian</label>
             </value>
-            <value>
-                <fullName>Arabic</fullName>
-                <default>false</default>
-                <isActive>false</isActive>
-                <label>Arabic</label>
-            </value>
-            <value>
-                <fullName>Cherokee</fullName>
-                <default>false</default>
-                <isActive>false</isActive>
-                <label>Cherokee</label>
-            </value>
-            <value>
-                <fullName>Korean</fullName>
-                <default>false</default>
-                <isActive>false</isActive>
-                <label>Korean</label>
-            </value>
-            <value>
-                <fullName>Vietnamese</fullName>
-                <default>false</default>
-                <isActive>false</isActive>
-                <label>Vietnamese</label>
-            </value>
         </valueSetDefinition>
     </valueSet>
     <visibleLines>4</visibleLines>

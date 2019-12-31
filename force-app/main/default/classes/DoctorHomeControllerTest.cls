@@ -11,21 +11,30 @@ public class DoctorHomeControllerTest
 				- Updates the appointment with UpdateAppointment()
 		*/
         DataFactory.createData(1); // create one doctor, one customer, and one appt between them
+        //Test.startTest();
+        //DoctorHomeController.getDoctorAppts();
+        //Test.stopTest();
+        
         Contact customer = [ 	SELECT Id
                             	FROM Contact 
-                            	WHERE RecordTypeId =: DoctorTraits.recTypeCust 
+                            	WHERE RecordTypeId =: DataFactory.recTypeCust 
                             	AND LastName LIKE '%Last0' 
                            ][0];
         Appointment__c myApp = [ 	SELECT Id, Status__c, Message__c 
                                 	FROM Appointment__c 
                                 	WHERE Customer_Contact__c =: customer.Id 
                                ];
+        Test.startTest();
         DoctorHomeController.updateAppointment( 'Test', 'Reject', (String) myApp.id );
+        Test.stopTest();
         Appointment__c checkApp = 
         	[	SELECT Id, Message__c, Status__c
                 FROM Appointment__c
                 WHERE Id =: myApp.Id
             ];
+        
+        DoctorHomeController.getDoctorAppts();
+        
         System.assertEquals(checkApp.Status__c, 'Cancelled');
         System.assertEquals(checkApp.Message__c, 'Test');
     }

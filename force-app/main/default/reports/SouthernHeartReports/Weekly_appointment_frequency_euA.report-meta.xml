@@ -8,7 +8,7 @@
             <axisBinding>y</axisBinding>
             <column>RowCount</column>
         </chartSummaries>
-        <chartType>VerticalColumn</chartType>
+        <chartType>HorizontalBar</chartType>
         <enableHoverLabels>false</enableHoverLabels>
         <expandOthers>true</expandOthers>
         <groupingColumn>Appointment__c$Start_Time__c</groupingColumn>
@@ -41,18 +41,18 @@
         <field>Appointment__c$Start_Time__c</field>
         <sortOrder>Asc</sortOrder>
     </groupingsDown>
-    <name>Weekly Appointment Frequency</name>
+    <name>Weekly appointment frequency</name>
     <params>
         <name>co</name>
         <value>1</value>
     </params>
     <reportType>AppointmentStartTimes__c</reportType>
     <scope>organization</scope>
-    <showDetails>false</showDetails>
-    <showGrandTotal>false</showGrandTotal>
-    <showSubTotals>false</showSubTotals>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
     <timeFrameFilter>
         <dateColumn>Appointment__c$CreatedDate</dateColumn>
-        <interval>INTERVAL_CUSTOM</interval>
+        <interval>INTERVAL_CURRENT</interval>
     </timeFrameFilter>
 </Report>

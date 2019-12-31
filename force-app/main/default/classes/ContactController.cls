@@ -1,6 +1,6 @@
 public with sharing class ContactController {
    
-     @AuraEnabled
+    /*  @AuraEnabled
     public static List<String> getAvailableDoctorSpecialityOptions() {
         List<String> pickListValuesList= new List<String>();
 		Schema.DescribeFieldResult fieldResult = Contact.Speciality__c.getDescribe();
@@ -73,5 +73,5 @@ public with sharing class ContactController {
              
         
         return docList;
-    } 
+    }  */
 }

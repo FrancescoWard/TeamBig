@@ -1,5 +1,4 @@
-<aura:component implements="forceCommunity:availableForAllPageTypes"
-                controller="LAC_CustomerController">
+<aura:component controller="LAC_CustomerController">
     <!-- Define attributes and handle events-->
     
     <aura:attribute name="specOptions" type="List" />
