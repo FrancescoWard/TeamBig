@@ -19,7 +19,7 @@ public class DataFactoryTest {
     public static void testAppts ()
     {	Contact dr = new Contact( FirstName = 'Doctor', LastName = 'Test0000' );
      	Contact cust = new Contact( FirstName = 'Customer', LastName = 'Test0000' );
-     	cust.RecordTypeId = DataFactory.recTypeCust;
+     	cust.RecordTypeId = DoctorTraits.recTypeCust;
      	insert dr; insert cust;
      	DataFactory.createAppts(dr, cust, 4);
     }

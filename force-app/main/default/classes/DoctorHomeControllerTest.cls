@@ -13,7 +13,7 @@ public class DoctorHomeControllerTest
         DataFactory.createData(1); // create one doctor, one customer, and one appt between them
         Contact customer = [ 	SELECT Id
                             	FROM Contact 
-                            	WHERE RecordTypeId =: DataFactory.recTypeCust 
+                            	WHERE RecordTypeId =: DoctorTraits.recTypeCust 
                             	AND LastName LIKE '%Last0' 
                            ][0];
         Appointment__c myApp = [ 	SELECT Id, Status__c, Message__c 
