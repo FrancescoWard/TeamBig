@@ -104,7 +104,7 @@
 		<members>Contact-Doctor Layout</members>
 		<name>Layout</name>
 	</types>
-    <types>
+    <types>                         <!-- 12/30: Reports and dashboards added with help of Workbench -->
 	    <members>SouthernHeartReports</members>
         <members>SouthernHeartReports/Flagged_Doctors_mRN</members>
         <members>SouthernHeartReports/Frequency_of_Appointments_for_Doctors_3io</members>

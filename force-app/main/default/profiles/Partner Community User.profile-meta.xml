@@ -545,6 +545,14 @@
         <field>Search__c.Specialty_Input__c</field>
         <readable>false</readable>
     </fieldPermissions>
+    <layoutAssignments>
+        <layout>Contact-Customer Layout</layout>
+        <recordType>Contact.Customer</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Contact-Doctor Layout</layout>
+        <recordType>Contact.Doctor</recordType>
+    </layoutAssignments>
     <objectPermissions>
         <allowCreate>true</allowCreate>
         <allowDelete>false</allowDelete>

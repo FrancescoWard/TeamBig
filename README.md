@@ -17,4 +17,6 @@ When deploying, you'll also have to replace the username in the <siteAdmin> tag 
 
 ## Add Community Customer and Partner Users for Testing
 
-When you deploy your org, it's obviously all metadata.  But if you want to actually look at our functionality you need test data, or at least a few activated doctors and customers.
+When you deploy your org, it's obviously all metadata.  But if you want to actually look at our functionality you need test data, or at least a few activated doctors and customers.  The static Data Factory class has two methods to help you: CreateData and CreateAppts.
+
+CreateData takes an argument, n, and creates 2n Contact records: n with record type Doctor and n with record type Customer.  It also creates an account, Southern Heart, from which both our communities flow.  (Southern Heart is instantiated enabled as a partner and only inserted once no matter how many times you call the class.)  Each Contact has a lookup to Southern Heart.  Doctor Contacts have random Genders, Languages and Specialties.  Customer records all have the last name 'Last%' (where the % is some number) and Doctors all have last name 'DrLast%'.  CreateData also makes two dummy Residences and adds all doctors to one of them.

@@ -168,7 +168,11 @@
     </dashboardGridLayout>
     <dashboardType>SpecifiedUser</dashboardType>
     <isGridLayout>true</isGridLayout>
+<<<<<<< HEAD
     <runningUser>francesco.ward@cunning-otter-qxiaf4.com</runningUser>
+=======
+    <runningUser>brady.achterberg@playful-fox-98ib6e.com</runningUser>
+>>>>>>> e452a670aa1b6352dbcbba0fee14dbc53bd4e9f1
     <textColor>#000000</textColor>
     <title>DoctorFrequencyDashboard</title>
     <titleColor>#000000</titleColor>
