@@ -1,5 +1,5 @@
 public class ContactSearchController {
-    
+    /*
     @AuraEnabled
     public static List<Contact> getDoctors(String specialty, String gender, String language) {
         List<Contact> docList = new List<Contact>();
@@ -9,5 +9,5 @@ public class ContactSearchController {
 		docList = database.query('Select Id, Name, Speciality__c, Gender__c, Languages__c From Contact Where RecordTypeId=:recTypeDoc limit 5');
         
         return docList;
-}
+}*/
 }
