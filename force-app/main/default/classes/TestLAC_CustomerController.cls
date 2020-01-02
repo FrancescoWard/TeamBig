@@ -2,26 +2,16 @@
 public class TestLAC_CustomerController {
 
    
-    @isTest    
+    @isTest (seeAllDAta=true)
     public static void runTests()
     {
-        Test.startTest();
-
-        LAC_CustomerController.getDoctors('Dermatology','Male','English');
+        System.debug( LAC_CustomerController.getDoctors('Any', 'Any', 'Any') );
+        System.debug( LAC_CustomerController.getDoctors('Dermatology','Male','English') );
         
-        LAC_CustomerController.getAppointments();
-        //Test.stopTest();
+        // LAC_CustomerController.getAppointments();
         
-        //Test.startTest();
         LAC_CustomerController.getAvailableDoctorGenderOptions();
-        //Test.stopTest();
-        
-        //Test.startTest();
         LAC_CustomerController.getAvailableDoctorLanguageOptions();
-        //Test.stopTest();
-        
-        //Test.startTest();
         LAC_CustomerController.getAvailableDoctorSpecialtyOptions();
-        Test.stopTest();
     }
 }

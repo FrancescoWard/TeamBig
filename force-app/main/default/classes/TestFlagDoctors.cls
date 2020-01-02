@@ -12,7 +12,7 @@ private class TestFlagDoctors {
         Contact cust = new Contact();
         	cust.LastName = 'Henry';
         	cust.RecordTypeId = recTypeCust;
-        String CRON_EXP = '0 0 0 1 1 ? 2020';
+        String CRON_EXP = '0 0 0 1 10 ? 2020';
         
         
         //Insert contacts and Appointment

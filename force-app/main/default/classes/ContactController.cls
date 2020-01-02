@@ -1,5 +1,5 @@
 public with sharing class ContactController {
-   
+/*   
      @AuraEnabled
     public static List<String> getAvailableDoctorSpecialityOptions() {
         List<String> pickListValuesList= new List<String>();
@@ -74,4 +74,4 @@ public with sharing class ContactController {
         
         return docList;
     } 
-}
+*/}
