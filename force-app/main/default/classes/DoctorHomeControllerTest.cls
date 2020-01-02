@@ -28,5 +28,7 @@ public class DoctorHomeControllerTest
             ];
         System.assertEquals(checkApp.Status__c, 'Cancelled');
         System.assertEquals(checkApp.Message__c, 'Test');
+        
+        DoctorHomeController.getDoctorAppts();
     }
 }
